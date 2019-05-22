@@ -26,11 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-LOU449H</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAeQzpcVAGuEi1h+d/hS3OwwAAAAACAAAAAAAQZgAAAAEAACAAAAA18rsesoVYiQc/p3uciRIhqdEHVkRnd7/J3+dgmpmxRQAAAAAOgAAAAAIAACAAAABOKKzrV3o+Q+2XbiePYCDf6fxIB3cVZaxUack7Yhx0YpAAAAA/vqcrHOF+iC3goeJ0Flz9qSnacPmhykWaZ8wchxdzpNd7O/RwIrXQzekX8xjalNA32Zh+28lcNR9IFvEL4f9vao85wosimeFsxcbTzL6FHOkDOuoBuQV970WaEy39eludb9BnygAjLEd3m1bDNZ93IZCR048p8ZQH6+iCXrWSW6pcJ4y8gs3zsWyjk7E5u/VAAAAA6GGcpUPbg3gkuiViK/L4Z0AB9MncG9MLAsIXY5DN480/NZ6tzXBNHwKh8fE5eVCEt/Ei6+KH4NjNHHEi8Ux6wQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAeQzpcVAGuEi1h+d/hS3OwwAAAAACAAAAAAAQZgAAAAEAACAAAABtp+2D8U0+DAb4hfB+yCpbfLW/8BVNy+dRXy+q+oSb3wAAAAAOgAAAAAIAACAAAACKZGqk3yr1qjFGU9ga3325bUlVWoxk4nhwvWZo9uPFFZAAAADK/El2O0cqYvGtwOG5T324zjIniun0v/2HXAs6W5RzIl6vscLFIvWMPF0eXXXhoLnKLpXtSg2VU69b936Es429H566N8GoXBcx3IFyAvlToYCbucS5/T/63Hw3aA4WMDp/nRSrt0bSukqe4kQw98c44QnRwyvdC4wWGD0428hcoWTPAOtolTayWFgBN3KnwbNAAAAAvtqDVM8UkFKHTFFI+eCdXfpL9vbhSqGIRLSG+7/nc/QgXC3+MFfMp1kuE/T1YA5Sx0XmfaTWF2XjBivLxsnNMA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="ExtractEventsPackage.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ExtractPersons.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -46,6 +47,113 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{39BF47E6-A575-411C-9F2D-DC2A33B00B24}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=AusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">AusbildungsEvaluierung</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">fhc02dwh.database.windows.net</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">dbadminFHC02</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ExtractPersons.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{C9699B26-8002-4751-B289-0FCEA1134131}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ExtractPersons</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8CDBADCF-1E42-4E9C-AF09-0756CF10977B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

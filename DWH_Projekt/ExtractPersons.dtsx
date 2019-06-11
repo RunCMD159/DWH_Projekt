@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="ExtractPersons"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{8CDBADCF-1E42-4E9C-AF09-0756CF10977B}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{CE24CDF8-7580-4231-A975-7C31C27A0AA9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,8 +27,33 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAeQzpcVAGuEi1h+d/hS3OwwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADi2xUeCIcz8RpG0lEXM+bR5i4H7bXxRQiiZqXynTWBbAAAAAAOgAAAAAIAACAAAAAFyiFCLCbQjpobuMz8bnYiOy5vRDQi6Z3eOdXNyFhuxCAAAAA7bI92XQ7/7n8qh7FSz6dgW4kB06fubud6lmkUlV4UV0AAAACHeCpjkKglOkKcDG1VpOURxDosD0oGkO/9NZw9F0s5JGNhJop5SKWpVqRlIbHyWhra7t3LZMJDAW97bSf7pWgU</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABVobJ1EhUHsMCUKP6WtiwWa8Fo9CR2jLR/Th5Cx0V0ngAAAAAOgAAAAAIAACAAAAA9Udc3e5KDlvV/tBUlJjvrjZ7UOH/GQdN4tV0wV+t9nyAAAABi3Sby7u5FHPMj/1OfTnTAImM0bAfittG4iUGFNF7alkAAAACpAXe5hwuR2Rz9V5lEu5kNs52Z2PlPciEKmkWfVVSSCpSMHWqHlxfMWaZeSJ+EE1Qegfo3kG1a+N6KrS/64hCw</DTS:Password>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1CAA6EA2-7C70-4A76-9320-3F9CDD28AEC4}"
+      DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLESdOvVS4HjW7ty72kYVC3+WnTyXLZnEXCAes/DneSgAAAAAOgAAAAAIAACAAAAC53ukDwJSZoK82zvhmZLEfgZYPDWDOzYSYCRd7P7VYkCAAAAA1oDwbXw6EnogpUiNfV7aEU2Iwfl2CgPIU1AtTw+atSUAAAABvfvVYUTBi7txvxkXPZb13yKc4Tji1/+8DPaoMOmHew4qpiAFaFQnIUJFx9Cb5L23tNMyfHxlaTTu8elt08xTn</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RICHARD-PC\FH.StimmungStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{77F329E5-08C5-442C-B924-5399D94D4413}"
+      DTS:ObjectName="RICHARD-PC\FH.StimmungStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=RICHARD-PC\FH;Initial Catalog=StimmungStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -92,13 +117,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Ausdruck für abgeleitete Spalte"
-                          name="Expression">(DT_I4)#{Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]} == 0 ? "MALE" : (DT_I4)#{Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]} == 1 ? "FEMALE" : "NA"</property>
+                          name="Expression">(DT_I4)#{Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]} == 0 ? "MALE" : "FEMALE"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Angezeigter Ausdruck für abgeleitete Spalte"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)Geschlecht == 0 ? "MALE" : (DT_I4)Geschlecht == 1 ? "FEMALE" : "NA"</property>
+                          name="FriendlyExpression">(DT_I4)Geschlecht == 0 ? "MALE" : "FEMALE"</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -145,7 +170,7 @@
                 <property
                   dataType="System.String"
                   description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[Personen_Denormalized]</property>
                 <property
                   dataType="System.String"
                   description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
@@ -188,8 +213,8 @@
               <connections>
                 <connection
                   refId="Package\Datenflusstask\OLE DB-Ziel.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
-                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
                   description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
                   name="OleDbConnection" />
               </connections>
@@ -200,8 +225,79 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Art]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Art"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[GebDat]"
+                      cachedDataType="dbDate"
+                      cachedName="GebDat"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geburtsdatum]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonNr]"
+                      cachedDataType="i4"
+                      cachedName="PersonNr"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Vorname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vorname"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[Nachname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Nachname"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      lineageId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].Columns[GenderDerived]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="GenderDerived"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      lineageId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte].Columns[GenderDerived]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vorname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Nachname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      dataType="wstr"
+                      length="10"
+                      name="Geschlecht" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geburtsdatum]"
+                      dataType="dbDate"
+                      name="Geburtsdatum" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      dataType="wstr"
+                      length="50"
+                      name="Art" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -437,15 +533,15 @@
           </components>
           <paths>
             <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
+              endId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Ausgabe der abgeleiteten Spalte"
+              startId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Ausgabe der abgeleiteten Spalte]" />
+            <path
               refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
               endId="Package\Datenflusstask\Abgeleitete Spalte.Inputs[Eingabe der abgeleiteten Spalte]"
               name="Ausgabe der OLE DB-Quelle"
               startId="Package\Datenflusstask\Personen.Outputs[Ausgabe der OLE DB-Quelle]" />
-            <path
-              refId="Package\Datenflusstask.Paths[Fehlerausgabe der abgeleiteten Spalte]"
-              endId="Package\Datenflusstask\OLE DB-Ziel.Inputs[Eingabe des OLE DB-Ziels]"
-              name="Fehlerausgabe der abgeleiteten Spalte"
-              startId="Package\Datenflusstask\Abgeleitete Spalte.Outputs[Fehlerausgabe der abgeleiteten Spalte]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -474,41 +570,33 @@
     design-time-name="Package\Datenflusstask">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="122.5,42"
           Id="Package\Datenflusstask\Personen"
-          TopLeft="235,63.5" />
+          TopLeft="324,75" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Datenflusstask\OLE DB-Ziel"
+          TopLeft="311.916666666667,270.333333333333" />
         <NodeLayout
           Size="164,42"
           Id="Package\Datenflusstask\Abgeleitete Spalte"
-          TopLeft="380,204" />
+          TopLeft="296.333333333333,196.666666666667" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="296.25,105.5">
+          TopLeft="381.791666666667,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="165.75,98.5"
+              EndConnector="0,79.6666666666667"
               Start="0,0"
-              End="165.75,91">
+              End="0,72.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.25"
-                    Point2="0,49.25"
-                    Point3="4,49.25" />
-                  <mssgle:LineSegment
-                    End="161.75,49.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="161.75,49.25"
-                    Point2="165.75,49.25"
-                    Point3="165.75,53.25" />
-                  <mssgle:LineSegment
-                    End="165.75,91" />
+                    End="0,72.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -517,44 +605,26 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="135,42"
-          Id="Package\Datenflusstask\OLE DB-Ziel"
-          TopLeft="409,358" />
         <EdgeLayout
-          Id="Package\Datenflusstask.Paths[Fehlerausgabe der abgeleiteten Spalte]"
-          TopLeft="462,246">
+          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
+          TopLeft="378.875,238.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="14.5,112"
+              EndConnector="0,31.6666666666667"
               Start="0,0"
-              End="14.5,104.5">
+              End="0,24.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,52"
-                    Point2="0,56"
-                    Point3="4,56" />
-                  <mssgle:LineSegment
-                    End="10.5,56" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.5,56"
-                    Point2="14.5,56"
-                    Point3="14.5,60" />
-                  <mssgle:LineSegment
-                    End="14.5,104.5" />
+                    End="0,24.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-77.88634765625,61,170.2726953125,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -562,6 +632,19 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Datenflusstask\Personen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Ziel">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

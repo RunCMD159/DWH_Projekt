@@ -1,0 +1,621 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/11/2019 2:28:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RICHARD-PC"
+  DTS:CreatorName="RICHARD-PC\richa"
+  DTS:DTSID="{D83A80A7-2F14-422D-8775-49E5AB94C457}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="ExtractEvaluierungen"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{C587DF07-945C-4F93-92BA-5FF67279B1A2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E778F923-4EB1-4173-A845-5A23DBF48CD1}"
+      DTS:ObjectName="fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=AusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyprv3HCeSs8KjjGK0vrsKLY2blsD8jZdQDogtWlJXGAAAAAAOgAAAAAIAACAAAADQnXIaL/2wtjAWgySCLP+BvVly68JseTAaV70+UnWCpSAAAACet678XtYhf/FoSTgVCoHvYjy2jImqWxkq1bQ7FlbCZ0AAAADfuYm52J0JXH+8wnz0CNE4d+4TLh7kK/7K5QqLP6NSlMeYEIGF+Ib0vsxLgwA/gjvwQaVmzS4gAoxiwOotJljr</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EB1F9C49-4245-4C1B-899A-D9971BAF650A}"
+      DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADxcNgX+jl4UhCPnbidxTRQCQZvPVBzZhUK6JY8/820qQAAAAAOgAAAAAIAACAAAACZfEJhpV3XXv6JBfUuAWOdGW20brDCCQsYnlCX9GfsuiAAAACs43XtUTtfFKBRWOaBuX9asXByG0G1Iup5KFqy5agIAUAAAAD69nXdQiS7sfnmn3Bokv9M6cRSMDm4sIoE4kwmzRtYSVoFIbM8NMzOZHB/9DtD0lqI/S4g7Y2s7y3wno2rTbrJ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{29F0F400-6BAC-47DC-BFC1-E00399BBCA28}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\Evaluierungen View"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="Evaluierungen View"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[v_EvalFactPreparation]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Evaluierungen View.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum der Evaluierung]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]"
+                      name="Datum der Evaluierung"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      name="PersonBusinessKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[VeranstaltungsBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VeranstaltungsBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[VeranstaltungsBusinessKey]"
+                      name="VeranstaltungsBusinessKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungBusinessKey]"
+                      name="StudienrichtungBusinessKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      name="AufbauUndGliederungDerLerhveranstaltung"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      name="LehrveranstaltungsleitungKompetenz"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      name="LehrveranstaltungsleitungEingehenAufFragen"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      name="BesondersGut"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungsBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]"
+                      name="EvaluierungsBusinessKey"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Datum der Evaluierung]"
+                      dataType="dbDate"
+                      name="Datum der Evaluierung" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VeranstaltungsBusinessKey]"
+                      dataType="i4"
+                      name="VeranstaltungsBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungBusinessKey]"
+                      dataType="i4"
+                      name="StudienrichtungBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      name="AufbauUndGliederungDerLerhveranstaltung" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      name="LehrveranstaltungsleitungKompetenz" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      name="LehrveranstaltungsleitungEingehenAufFragen" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[BesondersGut]"
+                      dataType="wstr"
+                      length="50"
+                      name="BesondersGut" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungsBusinessKey]"
+                      dataType="i4"
+                      name="EvaluierungsBusinessKey" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]"
+                      dataType="dbDate"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]"
+                      name="Datum der Evaluierung" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      name="PersonBusinessKey" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VeranstaltungsBusinessKey]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VeranstaltungsBusinessKey]"
+                      name="VeranstaltungsBusinessKey" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungBusinessKey]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungBusinessKey]"
+                      name="StudienrichtungBusinessKey" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]"
+                      name="EvaluierungsBusinessKey" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      name="AufbauUndGliederungDerLerhveranstaltung" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]"
+                      name="LehrveranstaltungsleitungKompetenz" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      name="LehrveranstaltungsleitungEingehenAufFragen" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
+                      name="BesondersGut" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Staging Evaluierungen"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="Staging Evaluierungen"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Evaluierungen]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Staging Evaluierungen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="PersonBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[VeranstaltungsBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="VeranstaltungsBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VeranstaltungsBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[VeranstaltungsBusinessKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[StudienrichtungBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="StudienrichtungBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[StudienrichtungBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungBusinessKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[AufbauUndGliederungDerLerhveranstaltung]"
+                      cachedDataType="i4"
+                      cachedName="AufbauUndGliederungDerLerhveranstaltung"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[AufbauUndGliederungDerLerhveranstaltung]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[LehrveranstaltungsleitungKompetenz]"
+                      cachedDataType="i4"
+                      cachedName="LehrveranstaltungsleitungKompetenz"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungKompetenz]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      cachedDataType="i4"
+                      cachedName="LehrveranstaltungsleitungEingehenAufFragen"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[LehrveranstaltungsleitungEingehenAufFragen]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[BesondersGut]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BesondersGut"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[BesondersGut]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[BesondersGut]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[Datum der Evaluierung]"
+                      cachedDataType="dbDate"
+                      cachedName="Datum der Evaluierung"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[EvaluierungsBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="EvaluierungsBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungBusinessKey]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungBusinessKey]"
+                      dataType="i4"
+                      name="EvaluierungBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[VeranstaltungsBusinessKey]"
+                      dataType="i4"
+                      name="VeranstaltungsBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[StudienrichtungBusinessKey]"
+                      dataType="i4"
+                      name="StudienrichtungBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Datum]"
+                      dataType="dbDate"
+                      name="Datum" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AufbauUndGliederungDerLerhveranstaltung]"
+                      dataType="i4"
+                      name="AufbauUndGliederungDerLerhveranstaltung" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungKompetenz]"
+                      dataType="i4"
+                      name="LehrveranstaltungsleitungKompetenz" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[LehrveranstaltungsleitungEingehenAufFragen]"
+                      dataType="i4"
+                      name="LehrveranstaltungsleitungEingehenAufFragen" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[BesondersGut]"
+                      dataType="wstr"
+                      length="50"
+                      name="BesondersGut" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Staging Evaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Evaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Evaluierungen.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147.5,42"
+          Id="Package\Datenflusstask"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122.5,42"
+          Id="Package\Datenflusstask\Evaluierungen View"
+          TopLeft="264,157" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Datenflusstask\Staging Evaluierungen"
+          TopLeft="222,277.5" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="325.25,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.25,78.5"
+              Start="0,0"
+              End="-11.25,71">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.25"
+                    Point2="0,39.25"
+                    Point3="-4,39.25" />
+                  <mssgle:LineSegment
+                    End="-7.25,39.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.25,39.25"
+                    Point2="-11.25,39.25"
+                    Point3="-11.25,43.25" />
+                  <mssgle:LineSegment
+                    End="-11.25,71" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Evaluierungen View">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Staging Evaluierungen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

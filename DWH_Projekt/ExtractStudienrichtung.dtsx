@@ -1,0 +1,413 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/11/2019 1:40:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RICHARD-PC"
+  DTS:CreatorName="RICHARD-PC\richa"
+  DTS:DTSID="{D316F656-5B2E-471E-9C69-041461C62F5E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="ExtractStudienrichtung"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{A76926BC-97CA-424C-9AA4-196D8C2B99B9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FB6BEB64-9E37-4636-B5FF-DB45B09F2543}"
+      DTS:ObjectName="fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=AusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADti76bDl8SG9WecY9j7AaGQ3Qwb5vRUl990rh2FPE0bQAAAAAOgAAAAAIAACAAAAC5wyWPYUgews7YpaR4qlzZqA+XZgzWazhTFec2tGiVEyAAAAC2OqbnhKpn8jXO3lV+4+RBVBtwdwvBqPrQLWQPOHLB1EAAAACK0lntP+cEx3B0GkHISdlM8NRq1rrFVfzrhv8mUFEsiM4Ui0YAGMIuZUVnN7G7Uer430vTjI5tPvXeE4MtvrGt</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EB1F9C49-4245-4C1B-899A-D9971BAF650A}"
+      DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAATP6kMhhAY2YCy4YP1MY2XjS2cT/JLVEAP7c3vHFIw6AAAAAAOgAAAAAIAACAAAAC3hNwVqvK0+eVXpjO/2pbi90Q0e6kO+eGM+FrK+OIKZyAAAAALlk5NOu9dTmLJS1w/ViHga5StVYeOsWIGbpCiDZeK/kAAAADxTrUx6hv5Y3V2vaxEpL7xrWurplFC0cbLsSDJ0RUNIa2GPt0DzL6HDK1MpOUJJ6TVrfGsQ56zlhunp65UPU/0</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{C1C86291-CB48-4B2D-901C-9B053C3343CE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="AusbildungsEvaluierung Tabelle Studienrichtungen"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Studienrichtungen]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Studienrichtung]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      name="Studienrichtung"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungNr]"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      name="StudienrichtungNr"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      name="Studienrichtung" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[StudienrichtungNr]"
+                      dataType="i4"
+                      name="StudienrichtungNr" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]"
+                      name="StudienrichtungNr" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Studienrichtung]"
+                      name="Studienrichtung" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Staging Studienrichtung"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="Staging Studienrichtung"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Studienrichtungen]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Staging Studienrichtung.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels].Columns[StudienrichtungNr]"
+                      cachedDataType="i4"
+                      cachedName="StudienrichtungNr"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[StudienrichtungsBusinessKey]"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[StudienrichtungNr]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels].Columns[Studienrichtung]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Studienrichtung"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Name]"
+                      lineageId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle].Columns[Studienrichtung]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[StudienrichtungsBusinessKey]"
+                      dataType="i4"
+                      name="StudienrichtungsBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Staging Studienrichtung.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Studienrichtung.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Studienrichtung.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Studienrichtung.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Studienrichtung.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Staging Studienrichtung.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen.Outputs[Ausgabe der OLE DB-Quelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147.5,42"
+          Id="Package\Datenflusstask"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="316,42"
+          Id="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen"
+          TopLeft="70.75,66.75" />
+        <NodeLayout
+          Size="176.5,42"
+          Id="Package\Datenflusstask\Staging Studienrichtung"
+          TopLeft="141.75,196.25" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="229.375,108.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87.5"
+              Start="0,0"
+              End="0,80">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\AusbildungsEvaluierung Tabelle Studienrichtungen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Staging Studienrichtung">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

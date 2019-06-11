@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/11/2019 11:51:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RICHARD-PC"
+  DTS:CreatorName="RICHARD-PC\richa"
+  DTS:DTSID="{C47E81F5-3C05-4389-BD40-DCC5C22E036B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="ExtractAndSplitPersons"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{90AF5E09-3054-498F-AB71-FE3ADBC34013}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{71D587BF-11E7-4825-946C-F19FFA2F6C4F}"
+      DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACL7S2SCNXaR4Kiyo/hIrUv/Kde4jEDMye8yFbMVM+EcgAAAAAOgAAAAAIAACAAAAD+FvxNwNswqaU5XDh+DDayaxFlsvZkMRNJW2uQJOYOESAAAABWEkKFMoK51SMXCR2l0yfudX0aDJv4cPOkqFF5O1Kdj0AAAADcZR6NXVJ8twmca3nhYRfINlG18Alxvqch1z2uL79b3jw0g51El1hGO4hAouKrkjxALep+c5azibH0NCi0dKVV</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{C35092C6-5E83-445D-A0CE-211F5EC1761F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\Denormalized Persons in Staging"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="Denormalized Persons in Staging"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Personen_Denormalized]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Denormalized Persons in Staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      name="PersonBusinessKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Vorname]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      name="Vorname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Nachname]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      name="Nachname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geschlecht]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      name="Geschlecht"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geburtsdatum]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geburtsdatum]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geburtsdatum]"
+                      name="Geburtsdatum"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Art]"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]"
+                      name="Art"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[ChangeType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[ChangeType]"
+                      length="1"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[ChangeType]"
+                      name="ChangeType"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Vorname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vorname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Nachname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Nachname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geschlecht]"
+                      dataType="wstr"
+                      length="10"
+                      name="Geschlecht" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Geburtsdatum]"
+                      dataType="dbDate"
+                      name="Geburtsdatum" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Art]"
+                      dataType="wstr"
+                      length="50"
+                      name="Art" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[ChangeType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ChangeType" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]"
+                      name="PersonBusinessKey" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Vorname]"
+                      name="Vorname" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Nachname]"
+                      name="Nachname" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geschlecht]"
+                      name="Geschlecht" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geburtsdatum]"
+                      dataType="dbDate"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Geburtsdatum]"
+                      name="Geburtsdatum" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Art]"
+                      name="Art" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ChangeType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ChangeType]"
+                      name="ChangeType" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Person Split ChangeType"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Bedingtes Teilen;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;0"
+              description="Leitet Datenzeilen je nach Inhalt der Daten an verschiedene Ausgaben weiter. Geben Sie mithilfe von Bedingungen (SSIS-Ausdrücken) an, welche Zeilen weitergeleitet werden. Trennen Sie beispielsweise Datensätze, die bereinigt werden müssen, von Datensätzen, die bereit zum Laden sind, oder leiten Sie nur eine Teilmenge der Datensätze weiter."
+              name="Person Split ChangeType"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]"
+                  description="Transformation für Eingabe für bedingtes Teilen"
+                  name="Eingabe für bedingtes Teilen">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen].Columns[ChangeType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ChangeType"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[ChangeType]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Insert]"
+                  description="Ausgabe &quot;1&quot; der Transformation für bedingtes Teilen"
+                  errorOrTruncationOperation="Berechnung"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Insert"
+                  synchronousInputId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Gibt den Ausdruck an. Die Version des Ausdrucks verwendet Herkunftsbezeichner anstelle von Spaltennamen."
+                      name="Expression">#{Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[ChangeType]} == "I"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Gibt die angezeigte Version des Ausdrucks an. Die Version des Ausdrucks verwendet Spaltennamen."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ChangeType == "I"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Gibt die Position der Bedingung in der Liste der von der Transformation ausgewerteten Bedingungen an. Werte werden aufsteigend vom niedrigsten zum höchsten ausgewertet."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Update]"
+                  description="Ausgabe &quot;2&quot; der Transformation für bedingtes Teilen"
+                  errorOrTruncationOperation="Berechnung"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update"
+                  synchronousInputId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Gibt den Ausdruck an. Die Version des Ausdrucks verwendet Herkunftsbezeichner anstelle von Spaltennamen."
+                      name="Expression">#{Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[ChangeType]} == "U"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Gibt die angezeigte Version des Ausdrucks an. Die Version des Ausdrucks verwendet Spaltennamen."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ChangeType == "U"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Gibt die Position der Bedingung in der Liste der von der Transformation ausgewerteten Bedingungen an. Werte werden aufsteigend vom niedrigsten zum höchsten ausgewertet."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Delete]"
+                  description="Ausgabe &quot;3&quot; der Transformation für bedingtes Teilen"
+                  errorOrTruncationOperation="Berechnung"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Delete"
+                  synchronousInputId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Gibt den Ausdruck an. Die Version des Ausdrucks verwendet Herkunftsbezeichner anstelle von Spaltennamen."
+                      name="Expression">#{Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[ChangeType]} == "D"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Gibt die angezeigte Version des Ausdrucks an. Die Version des Ausdrucks verwendet Spaltennamen."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ChangeType == "D"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Gibt die Position der Bedingung in der Liste der von der Transformation ausgewerteten Bedingungen an. Werte werden aufsteigend vom niedrigsten zum höchsten ausgewertet."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Standardausgabe für bedingtes Teilen]"
+                  description="Transformation für Standardausgabe für bedingtes Teilen"
+                  exclusionGroup="1"
+                  name="Standardausgabe für bedingtes Teilen"
+                  synchronousInputId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Fehlerausgabe für bedingtes Teilen]"
+                  description="Transformation für Fehlerausgabe für bedingtes Teilen"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe für bedingtes Teilen"
+                  synchronousInputId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Fehlerausgabe für bedingtes Teilen].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Person Split ChangeType.Outputs[Fehlerausgabe für bedingtes Teilen].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Person Split ChangeType.Outputs[Fehlerausgabe für bedingtes Teilen].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Person Split ChangeType.Outputs[Fehlerausgabe für bedingtes Teilen].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Staging Person Delete"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="Staging Person Delete"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Person_Delete]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Staging Person Delete.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Staging Person Delete.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Delete.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="PersonBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Delete.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Delete.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Staging Person Delete.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\Staging Person Delete.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Person Delete.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Person Delete.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Person Delete.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Person Delete.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Staging Person Update"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="Staging Person Update"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Personen_Update]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Staging Person Update.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="PersonBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].Columns[Vorname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vorname"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].Columns[Nachname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Nachname"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].Columns[Geschlecht]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Geschlecht"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].Columns[Geburtsdatum]"
+                      cachedDataType="dbDate"
+                      cachedName="Geburtsdatum"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geburtsdatum]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geburtsdatum]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].Columns[Art]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Art"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vorname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Nachname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      dataType="wstr"
+                      length="10"
+                      name="Geschlecht" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geburtsdatum]"
+                      dataType="dbDate"
+                      name="Geburtsdatum" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      dataType="wstr"
+                      length="50"
+                      name="Art" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Staging Person Update.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Person Update.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging Person Update.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging Person Update.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\Staging PersonInsert"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB-Ziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;4"
+              description="OLE DB-Ziel"
+              name="Staging PersonInsert"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset">[dbo].[Personen_Insert]</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob die für Identitätsspalten übergebenen Werte zum Ziel kopiert werden. Bei &quot;False&quot; werden die Werte für Identitätsspalten am Ziel automatisch generiert. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Zeigt an, ob für Spalten, die NULL enthalten, NULL am Ziel eingefügt wird. Bei &quot;False&quot; werden für Spalten, die NULL enthalten, am Ziel die Standardwerte eingefügt. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die für die Option &quot;Schnelles Laden&quot; zu verwendenden Optionen an. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt an, wann beim Einfügen von Daten Commits ausgegeben werden. Der Wert &quot;0&quot; gibt an, dass ein Commit am Ende des Einfügens von Daten ausgegeben wird. Trifft nur zu, wenn die Option &quot;Schnelles Laden&quot; aktiviert ist."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Staging PersonInsert.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  connectionManagerRefId="Package.ConnectionManagers[fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels]"
+                  errorOrTruncationOperation="Einfügen"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Eingabe des OLE DB-Ziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].Columns[PersonBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="PersonBusinessKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[PersonBusinessKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].Columns[Vorname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vorname"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Vorname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].Columns[Nachname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Nachname"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Nachname]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].Columns[Geschlecht]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Geschlecht"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geschlecht]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].Columns[Geburtsdatum]"
+                      cachedDataType="dbDate"
+                      cachedName="Geburtsdatum"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geburtsdatum]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Geburtsdatum]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].Columns[Art]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Art"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      lineageId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle].Columns[Art]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[PersonBusinessKey]"
+                      dataType="i4"
+                      name="PersonBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Vorname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vorname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Nachname]"
+                      dataType="wstr"
+                      length="50"
+                      name="Nachname" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geschlecht]"
+                      dataType="wstr"
+                      length="10"
+                      name="Geschlecht" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Geburtsdatum]"
+                      dataType="dbDate"
+                      name="Geburtsdatum" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[Art]"
+                      dataType="wstr"
+                      length="50"
+                      name="Art" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Staging PersonInsert.Outputs[Fehlerausgabe des OLE DB-Ziels]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe des OLE DB-Ziels"
+                  synchronousInputId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging PersonInsert.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Staging PersonInsert.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Staging PersonInsert.Outputs[Fehlerausgabe des OLE DB-Ziels].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Person Split ChangeType.Inputs[Eingabe für bedingtes Teilen]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\Denormalized Persons in Staging.Outputs[Ausgabe der OLE DB-Quelle]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Delete]"
+              endId="Package\Datenflusstask\Staging Person Delete.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Delete"
+              startId="Package\Datenflusstask\Person Split ChangeType.Outputs[Delete]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Insert]"
+              endId="Package\Datenflusstask\Staging PersonInsert.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Insert"
+              startId="Package\Datenflusstask\Person Split ChangeType.Outputs[Insert]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Update]"
+              endId="Package\Datenflusstask\Staging Person Update.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Update"
+              startId="Package\Datenflusstask\Person Split ChangeType.Outputs[Update]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147.5,42"
+          Id="Package\Datenflusstask"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="290.5,42"
+          Id="Package\Datenflusstask\Denormalized Persons in Staging"
+          TopLeft="179.5,108" />
+        <NodeLayout
+          Size="156.5,42"
+          Id="Package\Datenflusstask\Person Split ChangeType"
+          TopLeft="241.5,193" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="322.25,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Datenflusstask\Staging PersonInsert"
+          TopLeft="41,345" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Insert]"
+          TopLeft="319.75,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-193,110"
+              Start="0,0"
+              End="-193,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51"
+                    Point2="0,55"
+                    Point3="-4,55" />
+                  <mssgle:LineSegment
+                    End="-189,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-189,55"
+                    Point2="-193,55"
+                    Point3="-193,59" />
+                  <mssgle:LineSegment
+                    End="-193,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-110.25298828125,60,27.5059765625,9.40234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="187.5,42"
+          Id="Package\Datenflusstask\Staging Person Update"
+          TopLeft="243,341" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Update]"
+          TopLeft="340.625,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,106"
+              Start="0,0"
+              End="0,98.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.28029296875,43.4453125,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="201.5,42"
+          Id="Package\Datenflusstask\Staging Person Delete"
+          TopLeft="484.5,344" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Delete]"
+          TopLeft="356.875,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="228.375,109"
+              Start="0,0"
+              End="228.375,101.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5507853403141" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5507853403141"
+                    Point2="0,37.5507853403141"
+                    Point3="4,37.5507853403141" />
+                  <mssgle:LineSegment
+                    End="224.375,37.5507853403141" />
+                  <mssgle:CubicBezierSegment
+                    Point1="224.375,37.5507853403141"
+                    Point2="228.375,37.5507853403141"
+                    Point3="228.375,41.5507853403141" />
+                  <mssgle:LineSegment
+                    End="228.375,101.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="99.59115234375,42.5507853403141,29.1926953125,9.724609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Denormalized Persons in Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Staging PersonInsert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Staging Person Update">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\Staging Person Delete">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

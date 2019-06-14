@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="ExtractPersons"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{ABD9DA50-37BA-44E8-AB4C-9F684B614482}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{F5A8FF46-64E5-48A5-B535-E215E133390F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABZv2wt5SI+tbBWYqiWac9vhPRIZZ4r8etWSInjEKuMcwAAAAAOgAAAAAIAACAAAADwSSa7ufni9s1tCkN9NZOfA8KzdpMbZQXZjAi6U2+oOyAAAADQN/OGLE4iCVWf2GU7xZojlnHabJpGqvkCruMM6GGI6kAAAACmj2itkE1c3TQtkOzYGS/WD3qWw8JPaHSVfoYAgjPPeSdWE1f3ITk2p5Dan4g3wew64x7XTl5ytmkN0k2ZEjCr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIjt+Fzgp20WJG1R6G+3oNgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAoi7PygVsDD65YRuedHEeFeNkzK6flJT3NhWwMC8pgsQAAAAAOgAAAAAIAACAAAAAUiX4bqNweskR6KCw3QTycyN7frZfJ84s4qetNd/4NriAAAACBCbtihd8mb4EjOobVdUkGKRIUvXzLvnmjPlz7eALv20AAAADInha+nRhsW1ShxaCmm6NZUjf2XlYCthTYIuh+ERip6Ful+U0pL3c1cK2rPot7wByd5FezWJMCJzjma3MlF4R5</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABeRCnkZsgsYDJuq0tiVPyLeXoX61TqKLyKBgIpoMtGzgAAAAAOgAAAAAIAACAAAACltAGu7mW81VmtWGKYGoQRuwt5UJMgVNpAiyHXrJ+ajyAAAAAxVzwVJk0XfygA9u5hCuicetpvgGFm43X3wJ7mT+e0k0AAAAAWN0i21gnVGD8rqFModE9ln00eD96NJmiXTDnABiGliLZwmXkSUeFOh/tyDxlN8RbDkzffNg+3ozgLdlj8Chdc</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIjt+Fzgp20WJG1R6G+3oNgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqybZBAFt0Zj6qW+Etc1ee4bXw6qWctcv7LVH3uD7emQAAAAAOgAAAAAIAACAAAACtpq3tiZWQ4m3eyXkS9fol20yirFlMusd8DpZDcAP7uSAAAACcre38EeFjbRJCZCxop8pupPriBUfgdmLOFoP52NFwJEAAAAA5PM7G3bb2EZAuSkPkpG5ngaZ7kFSv4j5O8G5FmFI00aar2wYdJ11kYnHl/4jVXdZ4T+g18c2Oc2oFvtRAIbpn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -586,19 +586,19 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Dieser CDATA-Abschnitt enthält die Layoutinformationen des Pakets, z.B. Informationen wie X-/Y-Koordinaten, Breite und Höhe.-->
+<!--Wenn Sie diesen Abschnitt manuell ändern und Ihnen ein Fehler unterläuft, können Sie ihn löschen. -->
+<!--Das Paket kann zwar weiterhin normal geladen werden, aber frühere Layoutinformationen gehen verloren, und die Elemente auf der Entwurfsoberfläche werden vom Designer automatisch neu angeordnet.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Jeder darunter liegende Knoten enthält Eigenschaften, die sich nicht auf das Laufzeitverhalten auswirken.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="147.5,42"
+          Size="148,42"
           Id="Package\Datenflusstask"
           TopLeft="410.267857142857,83.0357142857143" />
       </GraphLayout>
@@ -610,13 +610,13 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="122.5,42"
-          Id="Package\Datenflusstask\Personen"
-          TopLeft="324,75" />
-        <NodeLayout
-          Size="262.5,42"
+          Size="262,42"
           Id="Package\Datenflusstask\Staging Person Denorm"
           TopLeft="259,283.666666666667" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Datenflusstask\Personen"
+          TopLeft="324,75" />
         <NodeLayout
           Size="164,42"
           Id="Package\Datenflusstask\Abgeleitete Spalte"
@@ -681,7 +681,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\Personen">
+    design-time-name="Package\Datenflusstask\Staging Person Denorm">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -694,7 +694,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Datenflusstask\Staging Person Denorm">
+    design-time-name="Package\Datenflusstask\Personen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="ExtractEvaluierungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{C587DF07-945C-4F93-92BA-5FF67279B1A2}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{8E0B914E-9E05-4E97-9AA5-308A155225E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyprv3HCeSs8KjjGK0vrsKLY2blsD8jZdQDogtWlJXGAAAAAAOgAAAAAIAACAAAADQnXIaL/2wtjAWgySCLP+BvVly68JseTAaV70+UnWCpSAAAACet678XtYhf/FoSTgVCoHvYjy2jImqWxkq1bQ7FlbCZ0AAAADfuYm52J0JXH+8wnz0CNE4d+4TLh7kK/7K5QqLP6NSlMeYEIGF+Ib0vsxLgwA/gjvwQaVmzS4gAoxiwOotJljr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADKoB7OdI65EroQCvlo3CsceM5Djoya4xL8DVStE6532QAAAAAOgAAAAAIAACAAAAANVIZ1PAXkqh/MKURxWDIh22QIge9Uu2qpe6DHLUTAHyAAAACrMaYdUTSXixbKF0RUx+NewkXAls9LoMAzr7xibMdue0AAAACcVVXk0pOPB31Ww4PD8H2FgiFev1ffONaQGT1wPo7BGgqb4uRCZNfkoG1Ppmvqfs8FCc1p5TKul6btv2Z0CyrA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -38,12 +38,7 @@
       DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQobe3wrZzEmrLoJdjEPuwQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADxcNgX+jl4UhCPnbidxTRQCQZvPVBzZhUK6JY8/820qQAAAAAOgAAAAAIAACAAAACZfEJhpV3XXv6JBfUuAWOdGW20brDCCQsYnlCX9GfsuiAAAACs43XtUTtfFKBRWOaBuX9asXByG0G1Iup5KFqy5agIAUAAAAD69nXdQiS7sfnmn3Bokv9M6cRSMDm4sIoE4kwmzRtYSVoFIbM8NMzOZHB/9DtD0lqI/S4g7Y2s7y3wno2rTbrJ</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -535,7 +530,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="147.5,42"
+          Size="148,42"
           Id="Package\Datenflusstask"
           TopLeft="5.5,5.5" />
       </GraphLayout>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02"
+  DTS:DTSID="{681BEF95-97AB-4D5D-9C01-5142A0ADD95D}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=DWHAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAACAAAAAAAQZgAAAAEAACAAAABtZjwaMc0rxD0nYZaxYMkNZ/KfP/hvhUxuDdMyfMpa4gAAAAAOgAAAAAIAACAAAAAT0gRv70nMM6V0PPxnD5LXBl2VSIxh+v9b+54FAvJrp4AAAAB5h/0sPO1TuTefDcCM+odma8yWQkxZ62tlXJDQDrIhdR7ng9JznLVi1XHXeBtWXfzJNxBTE1ax99RzDWdfNCr924hfdu6qNPdS4RvjRx2LHrl6hgnauCeo7sJPLMHGJyagsodzhQMRdOyoya63ggoEt2vhb3wb0TBpOXFHi6AZKEAAAADwzTny9kax8mdb7JbN4efDkPWFwK5HAPNDW/VMbEQ/N2E3O4boDM0Zo/YZrfN1IwHKT5EUcwSbU6PrmQnYgZjH</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-LOU449H</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIjt+Fzgp20WJG1R6G+3oNgAAAAACAAAAAAAQZgAAAAEAACAAAACieSC5g15mUCWG1BvYg8w4eJq9oYn/xjROii+cFK6Q9AAAAAAOgAAAAAIAACAAAAAkE3SqTBupjffdIWVOINwI7UoQlQEs+GOkk0xiKhT2T5AAAABP+9RqXciscwxXrMYkD2hyCnNB5k624Pla+Jb0hs8137OhWQwFVbkHtWVChFAgRHA45WOjPv8uBX7XMNnwdiImXvaLyMR40kbw+wy+5sWbpy3Z29DhYTHCQ1d0EgK+5flg8ZWzN1XvPJPXRS3WzWrHXJdRkQS76mYdfgOCW1NzNqC3Vbg5PrzrjDv+QD4Th8tAAAAAXDI76Nu5RpWzdsF5zKfsPZJ1SdACaHZsq4K/lTHttrUjdjZ+8HkxtYJ2zsT+7i5jIKN1AMcgmDcVlIl3O6Xq/Q==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAACAAAAAAAQZgAAAAEAACAAAADquYV5XIrmRkNnu4607MSaZotW0JUsA5Qcj0bg3/nS2AAAAAAOgAAAAAIAACAAAAA5/XG4zD8YY0H6BYt/E7vbb62gaMrXJ+iW0kCQDJIkwpAAAAB92+65gJ1JwYq2SXtDSZNzu3jwVKtFBk2y+g7/L0oquWUUZHUDsMiOZdG6li1KIhqtmt5O/B8jD8pXLtbTk/WRaeLCdn6WF7HS6i56PSNsPRuPDRcj7Z+wA1217QDUZ4+B4qmVEl7K+Dn6Zlg3FtJ21R/Y0z2vNj8alyJ3+88gqICUjBK8bms7IME7aAJFHUxAAAAAgGljcNqh7iipmm0hzMywV21oSN3DOwJ59AaAuZqdZPD0PRboPEWY/F8oWOSHufmniRxG18e/LKneZ9+b0Yhexw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -36,9 +36,13 @@
           <SSIS:Package SSIS:Name="ExtractStudienrichtung.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="ExtractEvaluierungen.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="LoadEvalierungen.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="LoadPersonenInsert.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="LoadPersonenUpdate.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="LoadPersonenDelete.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02.conmgr" />
+          <SSIS:ConnectionManager SSIS:Name="fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.conmgr" />
         </SSIS:ConnectionManagers>
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters>
@@ -117,6 +121,95 @@
               </SSIS:Properties>
             </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02.UserName">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">dbadminFHC02</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.ConnectionString">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=DWHAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.InitialCatalog">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">DWHAusbildungsEvaluierung</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.Password">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.RetainSameConnection">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.ServerName">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">fhc02dwh.database.windows.net</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.fhc02dwh.database.windows.net.DWHAusbildungsEvaluierung.dbadminFHC02.UserName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -1118,10 +1211,61 @@
                 <SSIS:Property SSIS:Name="Name">LoadEvalierungen</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{76B1D713-4483-4315-88EC-3CE0A48025E3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6D6F531E-4F80-43A0-9937-960FF9752CD9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="LoadPersonenInsert.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{8FD39460-81D8-4040-BE8B-2A443098F9A0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">LoadPersonenInsert</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5D371A4C-CF41-4881-A5D7-EFC766A83251}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="LoadPersonenUpdate.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F02DF076-95EC-442F-89C4-B8332D8C0F02}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">LoadPersonenUpdate</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2E6A0EBC-7DBE-45D4-98CA-7A8C2FC85FBA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="LoadPersonenDelete.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{DC5BB13A-83CC-4CD3-8973-28DCEC91E81C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">LoadPersonenDelete</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5E28161B-A1C9-43F2-83A7-369E97F830F9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

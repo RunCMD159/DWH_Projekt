@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DWH_Projekt", "DWH_Projekt\DWH_Projekt.dtproj", "{5C4B1FED-9102-4FBD-A586-7A8C895FAC4E}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DWH_SSAS", "DWH_SSAS\DWH_SSAS.dwproj", "{76DDC6D6-83C2-49D0-B477-9C2A91512B29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -12,6 +14,9 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5C4B1FED-9102-4FBD-A586-7A8C895FAC4E}.Development|Default.ActiveCfg = Development
 		{5C4B1FED-9102-4FBD-A586-7A8C895FAC4E}.Development|Default.Build.0 = Development
+		{76DDC6D6-83C2-49D0-B477-9C2A91512B29}.Development|Default.ActiveCfg = Development
+		{76DDC6D6-83C2-49D0-B477-9C2A91512B29}.Development|Default.Build.0 = Development
+		{76DDC6D6-83C2-49D0-B477-9C2A91512B29}.Development|Default.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,393 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d4af40a3-0f98-431d-9b84-2fd7abb6e100" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DWH Ausbildungs Evaluierung</ID>
+  <Name>DWH Ausbildungs Evaluierung</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="55f77831-eafa-4e4b-a65d-8c712b819160">
+      <ID>Dim Personen</ID>
+      <Name>Dim Personen</Name>
+      <DimensionID>Dim Personen</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3917a55d-99e2-4ba3-94ae-f45b1e930378">
+          <AttributeID>Person Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a0ecb956-4085-48b3-babd-9e50c856d4cd">
+      <ID>Dim Studienrichtung</ID>
+      <Name>Dim Studienrichtung</Name>
+      <DimensionID>Dim Studienrichtung</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e4912f0a-9c09-4b4c-932b-68dd5ba90501">
+          <AttributeID>Studienrichtungs Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a22a15ed-d420-4856-8191-a64ef1a47ac8">
+      <ID>Dim Veranstaltungen</ID>
+      <Name>Dim Veranstaltungen</Name>
+      <DimensionID>Dim Veranstaltungen</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ab0c4d6e-3a02-4fd7-9d57-1dff39a2e670">
+          <AttributeID>Verantstaltungs Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7c9e9aff-ef65-4a7a-bd7c-9b224887acda">
+      <ID>Fact Evaluierungen</ID>
+      <Name>Fact Evaluierungen</Name>
+      <DimensionID>Fact Evaluierungen</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="28812dae-af97-48e7-8b0e-6fbef8bb846e">
+          <AttributeID>Evaluierung Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="d0250a80-04ad-4361-b2c7-bb3f9722f9de">
+      <ID>Dim Personen</ID>
+      <Name>Dim Personen</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="8ac19715-5bdf-471c-8541-d7431aad569e">
+          <ID>Person Business Key</ID>
+          <Name>Person Business Key</Name>
+          <Source dwd:design-time-name="6255ce4b-47e0-44a8-a940-59dd4478400e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a447b0b3-57a5-4aa0-9bc6-d21812f12673">
+              <TableID>dbo_DimPersonen</TableID>
+              <ColumnID>PersonBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ca64895c-1d11-47f5-a083-418e67c8547d">
+          <ID>Dim Personen Count</ID>
+          <Name>Dim Personen Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1c4a8882-77c5-4b25-a8e0-e388f4b30160">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="3fa88950-d60a-458e-b4a6-b28e1a2dab0f">
+              <TableID>dbo_DimPersonen</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="8b53a224-c8dc-4611-b09a-16a463400b59">
+          <CubeDimensionID>Dim Personen</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8bbe879f-d68b-4888-aa96-26b9321782a9">
+              <AttributeID>Person Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ced124bc-c0e4-4ee6-bc10-dfa079c501b3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fbb457d5-b319-4034-863f-e69e7a8ca439">
+                    <TableID>dbo_DimPersonen</TableID>
+                    <ColumnID>PersonKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="116ced77-9113-42c5-92e7-f8e964f2ca8c">
+      <ID>Dim Studienrichtung</ID>
+      <Name>Dim Studienrichtung</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="0a0f36b8-ae92-4a6b-b5bc-dc0724ad7b9c">
+          <ID>Studienrichtungs Business Key</ID>
+          <Name>Studienrichtungs Business Key</Name>
+          <Source dwd:design-time-name="97f42349-2142-4730-832a-b4382271ff00">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9a13e067-b4b3-4de4-8a8d-1a618b4c98df">
+              <TableID>dbo_DimStudienrichtung</TableID>
+              <ColumnID>StudienrichtungsBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="934283f9-f492-4c37-8a3a-987a6ff6fd53">
+          <ID>Dim Studienrichtung Count</ID>
+          <Name>Dim Studienrichtung Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2a03b1c7-287a-49f8-8e84-0020cbc65e4e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ef0e20bb-ead2-4e6d-bd13-dd0ace80d629">
+              <TableID>dbo_DimStudienrichtung</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="49930fdb-a3dc-4154-8611-01866dc1330a">
+          <CubeDimensionID>Dim Studienrichtung</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a73009b6-d05d-4fcd-bd19-8e3e099a7b9f">
+              <AttributeID>Studienrichtungs Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="366d4241-dbd7-4df5-b849-d816be81ff23">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ce0b09ed-ddc9-4e24-8275-e88a3ebe62a3">
+                    <TableID>dbo_DimStudienrichtung</TableID>
+                    <ColumnID>StudienrichtungsKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="04dbe6e5-9d7a-4cd9-aba3-bfe186aed859">
+      <ID>Dim Veranstaltungen</ID>
+      <Name>Dim Veranstaltungen</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="fd38176e-57c3-47b5-92d1-a885031e91b0">
+          <ID>Verantstaltungs Business Key</ID>
+          <Name>Verantstaltungs Business Key</Name>
+          <Source dwd:design-time-name="8336ee03-1ef0-4133-a404-2cfeb907380d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0224b314-5243-4a2a-bb20-2830bb273a0a">
+              <TableID>dbo_DimVeranstaltungen</TableID>
+              <ColumnID>VerantstaltungsBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="adbda581-6cc5-4b93-8e00-dbfe0a7e8fae">
+          <ID>WS</ID>
+          <Name>WS</Name>
+          <Source dwd:design-time-name="acff5e49-9e6c-455f-893d-4ee95b1684a3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8d171482-ded5-4489-8c18-8e3244e4fe3c">
+              <TableID>dbo_DimVeranstaltungen</TableID>
+              <ColumnID>WS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="72d77e7d-79c0-42fd-9132-95ba7f0a2673">
+          <ID>Dim Veranstaltungen Count</ID>
+          <Name>Dim Veranstaltungen Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="eacd323b-7ca2-4613-8809-ed25995c9c5a">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="60685fff-8a19-4cbc-9dd6-37c8225a6381">
+              <TableID>dbo_DimVeranstaltungen</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="56e51783-9e09-4faa-8f3d-742a6b87bdd3">
+          <CubeDimensionID>Dim Veranstaltungen</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="82a8c357-cea5-467a-a444-aec799017c10">
+              <AttributeID>Verantstaltungs Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e7b81329-6236-49c3-b268-e9d5dfa77188">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8a32fd0f-a0ee-4ca7-8221-46a14a832b84">
+                    <TableID>dbo_DimVeranstaltungen</TableID>
+                    <ColumnID>VerantstaltungsKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="9f88291a-29f9-43e1-ac4f-30c96703c986">
+      <ID>Fact Evaluierungen</ID>
+      <Name>Fact Evaluierungen</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1ba0c787-f21b-4522-bb73-90ca6058c0a9">
+          <ID>Evaluierung Business Key</ID>
+          <Name>Evaluierung Business Key</Name>
+          <Source dwd:design-time-name="07ec19fb-063e-4f25-8f8b-8b608dea3411">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6a723b0a-db8d-4c7c-8113-27bd8b638408">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>EvaluierungBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b98b137e-8dc9-4196-86ff-6e5df90713cd">
+          <ID>Veranstaltungs Business Key</ID>
+          <Name>Veranstaltungs Business Key</Name>
+          <Source dwd:design-time-name="f91f61be-b955-4875-af76-aeab7da106be">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="341b53c9-75ef-4fab-bbd2-ee9f560f3071">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>VeranstaltungsBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ea202d11-be8e-4e12-a8cd-f8adcb413878">
+          <ID>Studienrichtung Business Key</ID>
+          <Name>Studienrichtung Business Key</Name>
+          <Source dwd:design-time-name="ad7295ce-c3b9-4b2d-bcee-e67fda7875a5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e37b6590-383d-482c-95ec-fb9b6a3c456f">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>StudienrichtungBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="003a1e21-8ba0-40e7-b234-8a626b4d6eb1">
+          <ID>Person Business Key - Fact Evaluierungen</ID>
+          <Name>Person Business Key - Fact Evaluierungen</Name>
+          <Source dwd:design-time-name="f03cba0b-43e5-4ac1-999f-c8fff602e773">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ded2acd9-238d-443e-abb9-a6f4a640e05c">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>PersonBusinessKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b22e2e7b-c897-45a7-8ea7-d28e8f7c0004">
+          <ID>Aufbau Und Gliederung Der Lerhveranstaltung</ID>
+          <Name>Aufbau Und Gliederung Der Lerhveranstaltung</Name>
+          <Source dwd:design-time-name="5fe5166b-5d41-4b37-8651-3141e1761b21">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f071d37f-769c-4293-89b6-157ef6ec3190">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>AufbauUndGliederungDerLerhveranstaltung</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="eec3a9b1-7aae-4a44-8aeb-1150aa0fe979">
+          <ID>Lehrveranstaltungsleitung Kompetenz</ID>
+          <Name>Lehrveranstaltungsleitung Kompetenz</Name>
+          <Source dwd:design-time-name="77f45033-400d-4e8f-beb1-b6ceae9c6983">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d639cab2-87ec-4844-a366-67655cc4fae8">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>LehrveranstaltungsleitungKompetenz</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9da07bb8-27de-4ff7-a0b0-3782ab8c8d03">
+          <ID>Lehrveranstaltungsleitung Eingehen Auf Fragen</ID>
+          <Name>Lehrveranstaltungsleitung Eingehen Auf Fragen</Name>
+          <Source dwd:design-time-name="e3f57d61-372c-4467-bf6d-24a01e92feef">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="21003795-840d-402e-80ba-6b2754f180ef">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>LehrveranstaltungsleitungEingehenAufFragen</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="82e6d24e-3a28-46e0-8f56-78c786f7a9d9">
+          <ID>Fact Evaluierungen Count</ID>
+          <Name>Fact Evaluierungen Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="291608b6-d8f1-46cd-9376-99172bdca687">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="d2d40e82-d58b-4efa-9d73-4322d37cdb55">
+              <TableID>dbo_FactEvaluierungen</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="9149936f-972e-4239-9cdd-40e57c299973">
+          <CubeDimensionID>Fact Evaluierungen</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d74cadff-81a7-441f-b47e-bed1140f0dd7">
+              <AttributeID>Evaluierung Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1864a9c8-13f9-42e1-be13-52bca6170d17">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4d39e809-ccc4-47d0-a157-de5362d3432b">
+                    <TableID>dbo_FactEvaluierungen</TableID>
+                    <ColumnID>EvaluierungKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="452c6799-d8e8-4958-9463-5859aa029c2a">
+    <DataSourceViewID>DWH Ausbildungs Evaluierung</DataSourceViewID>
+  </Source>
+</Cube>

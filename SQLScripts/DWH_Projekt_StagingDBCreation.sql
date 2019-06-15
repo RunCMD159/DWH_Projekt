@@ -51,4 +51,5 @@ CREATE TABLE [dbo].[Evaluierungen](
 	[LehrveranstaltungsleitungKompetenz] [int] NULL,
 	[LehrveranstaltungsleitungEingehenAufFragen] [int] NULL,
 	[BesondersGut] [nvarchar](50) NULL,
+	[AlterZumZeitpunktDerEvaluierung] [int] NOT NULL
 )

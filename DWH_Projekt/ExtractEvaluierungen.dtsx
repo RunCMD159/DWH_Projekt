@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="ExtractEvaluierungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{8E0B914E-9E05-4E97-9AA5-308A155225E3}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{B69457A7-F5F9-4D0B-A78D-DABB81ACF9F2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADKoB7OdI65EroQCvlo3CsceM5Djoya4xL8DVStE6532QAAAAAOgAAAAAIAACAAAAANVIZ1PAXkqh/MKURxWDIh22QIge9Uu2qpe6DHLUTAHyAAAACrMaYdUTSXixbKF0RUx+NewkXAls9LoMAzr7xibMdue0AAAACcVVXk0pOPB31Ww4PD8H2FgiFev1ffONaQGT1wPo7BGgqb4uRCZNfkoG1Ppmvqfs8FCc1p5TKul6btv2Z0CyrA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqyC89X6JcM0/vjJoyV/7iFMw2dBGnhMA047TH3swN8gAAAAAOgAAAAAIAACAAAABdGuxMkNEQBd722OEu4UWQzIHWQfU4QUDfvz3bgF29ASAAAADJLFs0S5Zxri3TeGKWMhSbDKpG+358bGFz964VH5MN60AAAABJBEKwoTPbL4mMKiFkarvkdx1FrtMJXjR2lg9wBM1IDtOFSvoI0O4kfdiPw9C4VRdH7iso4NbVdEaV9AWz04jB</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -38,7 +38,12 @@
       DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAV8Pzc6evq8a93iI/C5J+QpncpOZmFJMs7ThwhdEuDkQAAAAAOgAAAAAIAACAAAADXESFTPrBJEHFbAokVNdIW9KGMVQNtSFEztGKwzel8oSAAAACGYzaSm2MUM5AJ7AQBMiNkrGs1rqnF5BLhOeZbjF4EMUAAAAANtnDtpUJtZf545mmvjThJPGtLOlXqKNg2B64DxTtbj6CZ2bKp1rFpzLUHm3XIdIc3J7d/5ycfN1RHFunTnAQP</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -57,6 +62,91 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Datenflusstask\Berechne Alter"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Abgeleitete Spalte;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;0"
+              description="Erstellt neue Spaltenwerte, indem Ausdrücke auf Transformationseingabespalten angewendet werden. Erstellen Sie neue Spalten, oder überschreiben Sie vorhandene. Verketten Sie beispielsweise die Werte der Spalten &quot;first name&quot; und &quot;last name&quot;, um die Spalte &quot;full name&quot; zu erhalten."
+              name="Berechne Alter"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Berechne Alter.Inputs[Eingabe der abgeleiteten Spalte]"
+                  description="Eingabe der Transformation für abgeleiteten Spalten"
+                  name="Eingabe der abgeleiteten Spalte">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Berechne Alter.Inputs[Eingabe der abgeleiteten Spalte].Columns[Datum der Evaluierung]"
+                      cachedDataType="dbDate"
+                      cachedName="Datum der Evaluierung"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Berechne Alter.Inputs[Eingabe der abgeleiteten Spalte].Columns[GebDat]"
+                      cachedDataType="dbDate"
+                      cachedName="GebDat"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\Berechne Alter.Outputs[Ausgabe der abgeleiteten Spalte]"
+                  description="Standardausgabe der Transformation für abgeleitete Spalten"
+                  exclusionGroup="1"
+                  name="Ausgabe der abgeleiteten Spalte"
+                  synchronousInputId="Package\Datenflusstask\Berechne Alter.Inputs[Eingabe der abgeleiteten Spalte]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Berechne Alter.Outputs[Ausgabe der abgeleiteten Spalte].Columns[AlterZumZeitpunktDerEvaluierung]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Berechnung"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Datenflusstask\Berechne Alter.Outputs[Ausgabe der abgeleiteten Spalte].Columns[AlterZumZeitpunktDerEvaluierung]"
+                      name="AlterZumZeitpunktDerEvaluierung"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Ausdruck für abgeleitete Spalte"
+                          name="Expression">[DATEDIFF]("yy",#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]},#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Angezeigter Ausdruck für abgeleitete Spalte"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("yy",GebDat,[Datum der Evaluierung])</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Datenflusstask\Berechne Alter.Outputs[Fehlerausgabe der abgeleiteten Spalte]"
+                  description="Fehlerausgabe der Transformation für abgeleitete Spalten"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der abgeleiteten Spalte"
+                  synchronousInputId="Package\Datenflusstask\Berechne Alter.Inputs[Eingabe der abgeleiteten Spalte]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\Berechne Alter.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Berechne Alter.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Berechne Alter.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\Berechne Alter.Outputs[Fehlerausgabe der abgeleiteten Spalte].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Datenflusstask\Evaluierungen View"
               componentClassID="Microsoft.OLEDBSource"
@@ -200,6 +290,15 @@
                       lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]"
                       name="EvaluierungsBusinessKey"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GebDat]"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      name="GebDat"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -240,6 +339,10 @@
                       refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[EvaluierungsBusinessKey]"
                       dataType="i4"
                       name="EvaluierungsBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GebDat]"
+                      dataType="dbDate"
+                      name="GebDat" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -293,6 +396,11 @@
                       length="50"
                       lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[BesondersGut]"
                       name="BesondersGut" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      dataType="dbDate"
+                      lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GebDat]"
+                      name="GebDat" />
                     <outputColumn
                       refId="Package\Datenflusstask\Evaluierungen View.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
                       dataType="i4"
@@ -437,6 +545,12 @@
                       cachedName="EvaluierungsBusinessKey"
                       externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[EvaluierungBusinessKey]"
                       lineageId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[EvaluierungsBusinessKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].Columns[AlterZumZeitpunktDerEvaluierung]"
+                      cachedDataType="i4"
+                      cachedName="AlterZumZeitpunktDerEvaluierung"
+                      externalMetadataColumnId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AlterZumZeitpunktDerEvaluierung]"
+                      lineageId="Package\Datenflusstask\Berechne Alter.Outputs[Ausgabe der abgeleiteten Spalte].Columns[AlterZumZeitpunktDerEvaluierung]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -477,6 +591,10 @@
                       dataType="wstr"
                       length="50"
                       name="BesondersGut" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels].ExternalColumns[AlterZumZeitpunktDerEvaluierung]"
+                      dataType="i4"
+                      name="AlterZumZeitpunktDerEvaluierung" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -508,8 +626,13 @@
           </components>
           <paths>
             <path
-              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              refId="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
               endId="Package\Datenflusstask\Staging Evaluierungen.Inputs[Eingabe des OLE DB-Ziels]"
+              name="Ausgabe der abgeleiteten Spalte"
+              startId="Package\Datenflusstask\Berechne Alter.Outputs[Ausgabe der abgeleiteten Spalte]" />
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Berechne Alter.Inputs[Eingabe der abgeleiteten Spalte]"
               name="Ausgabe der OLE DB-Quelle"
               startId="Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle]" />
           </paths>
@@ -540,41 +663,55 @@
     design-time-name="Package\Datenflusstask">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="122.5,42"
-          Id="Package\Datenflusstask\Evaluierungen View"
-          TopLeft="264,157" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="184,42"
           Id="Package\Datenflusstask\Staging Evaluierungen"
-          TopLeft="222,277.5" />
+          TopLeft="202,283.5" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Datenflusstask\Evaluierungen View"
+          TopLeft="241,58" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Datenflusstask\Berechne Alter"
+          TopLeft="223,161" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="325.25,199">
+          TopLeft="299.5,100">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11.25,78.5"
+              EndConnector="0,61"
               Start="0,0"
-              End="-11.25,71">
+              End="0,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.25"
-                    Point2="0,39.25"
-                    Point3="-4,39.25" />
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
+          TopLeft="295.5,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.5"
+              Start="0,0"
+              End="0,73">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-7.25,39.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.25,39.25"
-                    Point2="-11.25,39.25"
-                    Point3="-11.25,43.25" />
-                  <mssgle:LineSegment
-                    End="-11.25,71" />
+                    End="0,73" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

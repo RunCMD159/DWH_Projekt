@@ -8,7 +8,7 @@
       DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=DWHAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAACAAAAAAAQZgAAAAEAACAAAABtZjwaMc0rxD0nYZaxYMkNZ/KfP/hvhUxuDdMyfMpa4gAAAAAOgAAAAAIAACAAAAAT0gRv70nMM6V0PPxnD5LXBl2VSIxh+v9b+54FAvJrp4AAAAB5h/0sPO1TuTefDcCM+odma8yWQkxZ62tlXJDQDrIhdR7ng9JznLVi1XHXeBtWXfzJNxBTE1ax99RzDWdfNCr924hfdu6qNPdS4RvjRx2LHrl6hgnauCeo7sJPLMHGJyagsodzhQMRdOyoya63ggoEt2vhb3wb0TBpOXFHi6AZKEAAAADwzTny9kax8mdb7JbN4efDkPWFwK5HAPNDW/VMbEQ/N2E3O4boDM0Zo/YZrfN1IwHKT5EUcwSbU6PrmQnYgZjH</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAACAAAAAAAQZgAAAAEAACAAAABtR3GlV4F+nLIBdAfJJXdoRFtQu2MGpqrU6huXuyZLhgAAAAAOgAAAAAIAACAAAABi9kg/E8iAnrVyhQ9PNPXHY5EFeX2jJwsyyQkHIug38YAAAAD5THTYe3uoJ1GV+YRgywWQafwB7eRdDo8UMGCOFDXz2Fq/mrEgjuTya6t2xqMzgxLfHS3IWG6yxU+GSU2mXnRbX4jc/PCE3ZbH07lrGQv9f4DBPBmHtknM5VdnhyiI6Ot/uJe97KdmjKo17W6JwuoVmG2UQ8u3zPkbxzR5m6Kg1UAAAABUu5TLu3WRtpp76nz+r5L/Q09AN+K3GnjizAQ2yTif05Aw9CnqB1u7UtPmBHWN8R9a531FTCklU2bBBNFMYodG</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -10,6 +10,7 @@ CREATE TABLE FactEvaluierungen
 	[LehrveranstaltungsleitungKompetenz] [int] NULL,
 	[LehrveranstaltungsleitungEingehenAufFragen] [int] NULL,
 	[BesondersGut] [nvarchar](50) NULL,
+	[AlterZumZeitpunktDerEvaluierung] [int] NOT NULL
 )
 
 CREATE TABLE DimPersonen

@@ -11,7 +11,7 @@ AS
 SELECT Datum AS 'Datum der Evaluierung', PersonNr as PersonBusinessKey, 
 ver.VerantstaltungsNr as VeranstaltungsBusinessKey,  StudienrichtungNr as StudienrichtungBusinessKey, 
 EvaluierungNr as EvaluierungsBusinessKey,
-AufbauUndGliederungDerLerhveranstaltung, LehrveranstaltungsleitungKompetenz, LehrveranstaltungsleitungEingehenAufFragen, BesondersGut 
+AufbauUndGliederungDerLerhveranstaltung, LehrveranstaltungsleitungKompetenz, LehrveranstaltungsleitungEingehenAufFragen, BesondersGut, GebDat
 FROM Evaluierungen
 INNER JOIN Personen ON (PersonNrFK = PersonNr)
 INNER JOIN Veranstaltungen as ver ON (VerantstaltungNrFK = VerantstaltungsNr)

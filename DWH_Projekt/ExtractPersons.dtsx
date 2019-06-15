@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="ExtractPersons"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{F5A8FF46-64E5-48A5-B535-E215E133390F}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{8D85BF50-B7A1-467B-B0E4-489B8A765B5A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,12 +23,7 @@
       DTS:ObjectName="fhc02dwh.database.windows.net.AusbildungsEvaluierung.dbadminFHC02">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=AusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIjt+Fzgp20WJG1R6G+3oNgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAoi7PygVsDD65YRuedHEeFeNkzK6flJT3NhWwMC8pgsQAAAAAOgAAAAAIAACAAAAAUiX4bqNweskR6KCw3QTycyN7frZfJ84s4qetNd/4NriAAAACBCbtihd8mb4EjOobVdUkGKRIUvXzLvnmjPlz7eALv20AAAADInha+nRhsW1ShxaCmm6NZUjf2XlYCthTYIuh+ERip6Ful+U0pL3c1cK2rPot7wByd5FezWJMCJzjma3MlF4R5</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=AusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -38,12 +33,7 @@
       DTS:ObjectName="fhc02dwh.database.windows.net.StagingAusbildungsEvaluierung.dbadminFHC02">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIjt+Fzgp20WJG1R6G+3oNgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqybZBAFt0Zj6qW+Etc1ee4bXw6qWctcv7LVH3uD7emQAAAAAOgAAAAAIAACAAAACtpq3tiZWQ4m3eyXkS9fol20yirFlMusd8DpZDcAP7uSAAAACcre38EeFjbRJCZCxop8pupPriBUfgdmLOFoP52NFwJEAAAAA5PM7G3bb2EZAuSkPkpG5ngaZ7kFSv4j5O8G5FmFI00aar2wYdJ11kYnHl/4jVXdZ4T+g18c2Oc2oFvtRAIbpn</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=fhc02dwh.database.windows.net;User ID=dbadminFHC02;Initial Catalog=StagingAusbildungsEvaluierung;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -586,12 +576,12 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Dieser CDATA-Abschnitt enthält die Layoutinformationen des Pakets, z.B. Informationen wie X-/Y-Koordinaten, Breite und Höhe.-->
-<!--Wenn Sie diesen Abschnitt manuell ändern und Ihnen ein Fehler unterläuft, können Sie ihn löschen. -->
-<!--Das Paket kann zwar weiterhin normal geladen werden, aber frühere Layoutinformationen gehen verloren, und die Elemente auf der Entwurfsoberfläche werden vom Designer automatisch neu angeordnet.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Jeder darunter liegende Knoten enthält Eigenschaften, die sich nicht auf das Laufzeitverhalten auswirken.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -620,21 +610,21 @@
         <NodeLayout
           Size="164,42"
           Id="Package\Datenflusstask\Abgeleitete Spalte"
-          TopLeft="296.333333333333,196.666666666667" />
+          TopLeft="305.333333333333,173.666666666667" />
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
-          TopLeft="381.791666666667,117">
+          TopLeft="386.166666666667,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,79.6666666666667"
+              EndConnector="0,56.666666666667"
               Start="0,0"
-              End="0,72.1666666666667">
+              End="0,49.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,72.1666666666667" />
+                    End="0,49.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -645,30 +635,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Datenflusstask.Paths[Ausgabe der abgeleiteten Spalte]"
-          TopLeft="378.333333333333,238.666666666667">
+          TopLeft="388.666666666667,215.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.9166666666666,45"
+              EndConnector="0,68"
               Start="0,0"
-              End="11.9166666666666,37.5">
+              End="0,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="7.91666666666663,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.91666666666663,22.5"
-                    Point2="11.9166666666666,22.5"
-                    Point3="11.9166666666666,26.5" />
-                  <mssgle:LineSegment
-                    End="11.9166666666666,37.5" />
+                    End="0,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

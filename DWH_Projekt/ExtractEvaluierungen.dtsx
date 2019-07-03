@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="ExtractEvaluierungen"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{B69457A7-F5F9-4D0B-A78D-DABB81ACF9F2}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{7DA577DD-240B-4FD6-B9B8-4843A554074E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqyC89X6JcM0/vjJoyV/7iFMw2dBGnhMA047TH3swN8gAAAAAOgAAAAAIAACAAAABdGuxMkNEQBd722OEu4UWQzIHWQfU4QUDfvz3bgF29ASAAAADJLFs0S5Zxri3TeGKWMhSbDKpG+358bGFz964VH5MN60AAAABJBEKwoTPbL4mMKiFkarvkdx1FrtMJXjR2lg9wBM1IDtOFSvoI0O4kfdiPw9C4VRdH7iso4NbVdEaV9AWz04jB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8XlLcTgcDasbtjDKKEcRpBnCWCEJDMPDRAwswt73JfAAAAAAOgAAAAAIAACAAAADXiUExjUZuzQGdKvIMjtauIzCnZtW1NqaQa+OzkrJmVSAAAACKT/BoiwkS0ie0KJ5ufoHCyy2wKPdAvVWWdDPgxPHlpEAAAAD1b9tlbbBVZhrdf3wezQ2HYlDmJqSh02RX9T/38E5sJAUam8qK820bs5Pl76slBp+tyKKsx8EvF7dnqkJeC1r9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAV8Pzc6evq8a93iI/C5J+QpncpOZmFJMs7ThwhdEuDkQAAAAAOgAAAAAIAACAAAADXESFTPrBJEHFbAokVNdIW9KGMVQNtSFEztGKwzel8oSAAAACGYzaSm2MUM5AJ7AQBMiNkrGs1rqnF5BLhOeZbjF4EMUAAAAANtnDtpUJtZf545mmvjThJPGtLOlXqKNg2B64DxTtbj6CZ2bKp1rFpzLUHm3XIdIc3J7d/5ycfN1RHFunTnAQP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGvW/PS9rjkOqpL2nLttB9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACKXfkEeKolCQTQ1Ccw6rFPhlZGyEp7gctJ/T3FcCCeDgAAAAAOgAAAAAIAACAAAAAWlYDIIijO67Nuv3Dzmrp4hIn4DZX895uMK4sStEFB8SAAAABGKVhY/edNJevj6wN8xFKkz/DPdS+mx/eltIcgFPOVA0AAAADwLhwaZ3pbaZt0W3cHNP1Qoo/tMM341A9TdV+C7GU/AIfpqp39NK1W+zCqmlJWOoHmFp35GLdDHYs9RALAO0DB</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -110,13 +110,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Ausdruck für abgeleitete Spalte"
-                          name="Expression">[DATEDIFF]("yy",#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]},#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]})</property>
+                          name="Expression">[DATEADD]("yy",[DATEDIFF]("yy",#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]},#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]}),#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]}) &gt; #{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]} ? [DATEDIFF]("yy",#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]},#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]}) + 1 : [DATEDIFF]("yy",#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[GebDat]},#{Package\Datenflusstask\Evaluierungen View.Outputs[Ausgabe der OLE DB-Quelle].Columns[Datum der Evaluierung]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Angezeigter Ausdruck für abgeleitete Spalte"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEDIFF("yy",GebDat,[Datum der Evaluierung])</property>
+                          name="FriendlyExpression">DATEADD("yy",DATEDIFF("yy",GebDat,[Datum der Evaluierung]),GebDat) &gt; [Datum der Evaluierung] ? DATEDIFF("yy",GebDat,[Datum der Evaluierung]) + 1 : DATEDIFF("yy",GebDat,[Datum der Evaluierung])</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -665,13 +665,13 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42"
-          Id="Package\Datenflusstask\Staging Evaluierungen"
-          TopLeft="202,283.5" />
-        <NodeLayout
           Size="122,42"
           Id="Package\Datenflusstask\Evaluierungen View"
           TopLeft="241,58" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Datenflusstask\Staging Evaluierungen"
+          TopLeft="202,283.5" />
         <NodeLayout
           Size="148,42"
           Id="Package\Datenflusstask\Berechne Alter"

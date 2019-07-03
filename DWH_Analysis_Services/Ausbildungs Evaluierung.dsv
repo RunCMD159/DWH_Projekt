@@ -1,0 +1,118 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4a01930b-ad63-4d41-8252-f5c91e1d2d12" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ausbildungs Evaluierung</ID>
+  <Name>Ausbildungs Evaluierung</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Ausbildungs Evaluierung</DataSourceID>
+  <Schema>
+    <xs:schema id="Ausbildungs_x0020_Evaluierung" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Ausbildungs_x0020_Evaluierung" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="5d826840-a847-487d-905c-254a9febe690">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_dbo.TestdatenFuerDM" msprop:design-time-name="afddb536-fed8-4573-86bf-78f2f3f8d28a" msprop:DbTableName="dbo.TestdatenFuerDM" msprop:FriendlyName="dbo.TestdatenFuerDM" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Ausweisnr" msprop:design-time-name="d17623ef-e5cd-4cf5-b411-fdbb89d72539" msprop:DbColumnName="Ausweisnr" msprop:FriendlyName="Ausweisnr" type="xs:int" />
+                  <xs:element name="Geschlecht" msprop:design-time-name="2e2c3760-34b8-48cb-81d9-103109ba526d" msprop:DbColumnName="Geschlecht" msprop:FriendlyName="Geschlecht">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Veranstaltung" msprop:design-time-name="bd14ebba-e2ca-44c5-a23a-8dae15ed4eec" msprop:DbColumnName="Veranstaltung" msprop:FriendlyName="Veranstaltung" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Bundesland" msprop:design-time-name="f11d0def-f38c-4d23-9d89-3d8ddfe1459f" msprop:DbColumnName="Bundesland" msprop:FriendlyName="Bundesland" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Inhalt" msprop:design-time-name="ab62b042-e73e-41f0-8b9a-179a61ecd484" msprop:DbColumnName="Inhalt" msprop:FriendlyName="Inhalt" type="xs:int" minOccurs="0" />
+                  <xs:element name="Kompetenz" msprop:design-time-name="d2857400-062b-4946-a1c1-0dafab88d12d" msprop:DbColumnName="Kompetenz" msprop:FriendlyName="Kompetenz" type="xs:int" minOccurs="0" />
+                  <xs:element name="Schwierigkeitsgrad" msprop:design-time-name="f68ec3f4-03f0-4b18-92dc-5bee8a115049" msprop:DbColumnName="Schwierigkeitsgrad" msprop:FriendlyName="Schwierigkeitsgrad" type="xs:int" minOccurs="0" />
+                  <xs:element name="Empfohlen" msprop:design-time-name="82f092c6-8884-44aa-bddc-2c4e77c96809" msprop:DbColumnName="Empfohlen" msprop:FriendlyName="Empfohlen" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AlterInJahren" msprop:design-time-name="1ce35ea6-723c-46de-934c-b63eb71283c6" msprop:DbColumnName="AlterInJahren" msprop:FriendlyName="AlterInJahren" type="xs:int" minOccurs="0" />
+                  <xs:element name="Lehrabschluss" msprop:design-time-name="86b8a440-f51c-4c14-a7d7-2fc32d74627d" msprop:DbColumnName="Lehrabschluss" msprop:FriendlyName="Lehrabschluss" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Matura" msprop:design-time-name="c24b5f59-971d-409c-95a4-afd05526c46f" msprop:DbColumnName="Matura" msprop:FriendlyName="Matura" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WG" msprop:design-time-name="e870f5d4-883d-46ae-89e0-9a3298d4c5cb" msprop:DbColumnName="WG" msprop:FriendlyName="WG" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dbo.TestdatenFuerDM" />
+          <xs:field xpath="Ausweisnr" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <Ausbildungs_x0020_Evaluierung xmlns="" />
+  </Schema>
+</DataSourceView>

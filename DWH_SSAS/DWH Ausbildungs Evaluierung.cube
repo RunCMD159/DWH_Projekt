@@ -6,6 +6,125 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="10159" scrolltop="-8414" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="34925" y="21696" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimStudienrichtung" left="7756" top="0" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="4895" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00001f130000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimStudienrichtung" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimVeranstaltungen" left="20" top="0" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="4736" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000801200009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimVeranstaltungen" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimPersonen" left="25557" top="0" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="3678" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00005e0e000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimPersonen" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactEvaluierungen" left="15651" top="0" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="6906" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000fa1a000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactEvaluierungen" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="22257" top="0" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="3600" height="959" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEvaluierungen-DimPersonen]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="14" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="25557" y="559" />
+              <point x="24057" y="559" />
+              <point x="24057" y="300" />
+              <point x="22557" y="300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4456" top="-52" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="11495" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEvaluierungen-DimVeranstaltungen]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="19" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4756" y="347" />
+              <point x="10203" y="347" />
+              <point x="10203" y="300" />
+              <point x="15651" y="300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12351" top="202" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="3600" height="948" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEvaluierungen-DimStudienrichtung]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="19" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12651" y="601" />
+              <point x="14151" y="601" />
+              <point x="14151" y="850" />
+              <point x="15651" y="850" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +140,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>10159</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-8414</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -51,6 +170,12 @@
         <Attribute dwd:design-time-name="3917a55d-99e2-4ba3-94ae-f45b1e930378">
           <AttributeID>Person Key</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="244030aa-3bc5-4db3-a63d-4ded86958507">
+          <AttributeID>Geschlecht</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb347e46-70e4-46d2-9d85-6aea4cdec468">
+          <AttributeID>Alter</AttributeID>
+        </Attribute>
       </Attributes>
     </Dimension>
     <Dimension dwd:design-time-name="a0ecb956-4085-48b3-babd-9e50c856d4cd">
@@ -61,7 +186,15 @@
         <Attribute dwd:design-time-name="e4912f0a-9c09-4b4c-932b-68dd5ba90501">
           <AttributeID>Studienrichtungs Key</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="796741c8-857a-4443-a5eb-a1b1da52fd35">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="20a48219-e0ab-4b15-87a9-41fa17156f0e">
+          <HierarchyID>Hierarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
     <Dimension dwd:design-time-name="a22a15ed-d420-4856-8191-a64ef1a47ac8">
       <ID>Dim Veranstaltungen</ID>
@@ -70,6 +203,9 @@
       <Attributes>
         <Attribute dwd:design-time-name="ab0c4d6e-3a02-4fd7-9d57-1dff39a2e670">
           <AttributeID>Verantstaltungs Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="70bf9407-edce-46c4-83b9-d58edcde5cd5">
+          <AttributeID>Veranstaltungsart</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -80,6 +216,12 @@
       <Attributes>
         <Attribute dwd:design-time-name="28812dae-af97-48e7-8b0e-6fbef8bb846e">
           <AttributeID>Evaluierung Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e6c857d-8c69-4bd2-b15d-42a078a1348b">
+          <AttributeID>Datum</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9a17fa49-8fc0-4108-88aa-646748426cc2">
+          <AttributeID>Besonders Gut</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -113,6 +255,66 @@
             <DataSize>4</DataSize>
             <Source xsi:type="RowBinding" dwd:design-time-name="3fa88950-d60a-458e-b4a6-b28e1a2dab0f">
               <TableID>dbo_DimPersonen</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="53381e4c-1831-4a91-a2ef-9818728ba0c3">
+          <ID>Alter</ID>
+          <Name>Alter</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="a613bbe8-3cc3-4a3e-8061-5fb5e94dc414">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a22a2503-585c-47ad-8beb-ee54fc6b06e8">
+              <TableID>dbo_DimPersonen</TableID>
+              <ColumnID>Alter</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="813bb5fc-9961-438d-b414-2041fe533b39">
+          <ID>Geschlecht  Anzahl</ID>
+          <Name>Geschlecht  Anzahl</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="04d700cf-858d-4cf6-9709-937c2d5478fd">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="44912db4-c169-40cd-bed1-9f3b84161449">
+              <TableID>dbo_DimPersonen</TableID>
+              <ColumnID>Geschlecht</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f38aa60a-49f7-4ae4-bcbc-0ad265febc0f">
+          <ID>Alter - Dim Personen</ID>
+          <Name>Alter - Dim Personen</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <Source dwd:design-time-name="2d480fa3-6f58-4ee2-a19a-9bb309453cca">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="12874a7a-9988-43f2-90ab-7ce1de56c085">
+              <TableID>dbo_DimPersonen</TableID>
+              <ColumnID>Alter</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0a7d2ca2-c840-4aa9-8a26-fa1bef9a1e34">
+          <ID>Alter - Dim Personen 1</ID>
+          <Name>Altersschnitt</Name>
+          <Source dwd:design-time-name="090ee8ad-6720-4aea-be3d-09b0d35c9eba">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="aee5e5c0-d69a-4e72-857c-54912db8bfce">
+              <TableID>dbo_DimPersonen</TableID>
+              <ColumnID>Alter</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9f0a5b94-1013-4ae6-8e52-f5a06dab85f3">
+          <ID>Alter - Dim Personen 2</ID>
+          <Name>Altersanzahl</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="4a01cf96-eb36-467c-9bc0-6d1652985220">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f4d6d1f8-7a76-48db-8206-dfb9a1c1b6d3">
+              <TableID>dbo_DimPersonen</TableID>
+              <ColumnID>Alter</ColumnID>
             </Source>
           </Source>
         </Measure>
@@ -169,6 +371,19 @@
             <DataSize>4</DataSize>
             <Source xsi:type="RowBinding" dwd:design-time-name="ef0e20bb-ead2-4e6d-bd13-dd0ace80d629">
               <TableID>dbo_DimStudienrichtung</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b3132e69-4758-4e9a-a1e2-76d96fad2e93">
+          <ID>Name  Anzahl</ID>
+          <Name>Name  Anzahl</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="83b21d95-fc00-46b1-9926-eb3ca7b37921">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e6ec5e8d-d89b-429b-bc34-aca50f8fd5c6">
+              <TableID>dbo_DimStudienrichtung</TableID>
+              <ColumnID>Name</ColumnID>
             </Source>
           </Source>
         </Measure>
@@ -236,6 +451,19 @@
             <DataSize>4</DataSize>
             <Source xsi:type="RowBinding" dwd:design-time-name="60685fff-8a19-4cbc-9dd6-37c8225a6381">
               <TableID>dbo_DimVeranstaltungen</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3d4e2f16-7301-489f-8eb2-ba089269d950">
+          <ID>Veranstaltungsart  Anzahl</ID>
+          <Name>Veranstaltungsart  Anzahl</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="04cf8790-8c55-4cbe-977a-2cb1b82e5499">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8ce090da-61d0-445d-897a-b25e798fc229">
+              <TableID>dbo_DimVeranstaltungen</TableID>
+              <ColumnID>Veranstaltungsart</ColumnID>
             </Source>
           </Source>
         </Measure>
@@ -361,6 +589,32 @@
             </Source>
           </Source>
         </Measure>
+        <Measure dwd:design-time-name="4add6876-f461-4043-aaaf-2e55fc29c8db">
+          <ID>Datum  Anzahl</ID>
+          <Name>Datum  Anzahl</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="e9aeab1e-322e-4a06-b2ca-65066deb48a5">
+            <DataType>Date</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3acfc3e0-c4a1-4662-90e5-f07f9ff4ff1f">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>Datum</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="36164e91-3acd-4273-9c15-c3aa82dcb4b5">
+          <ID>Besonders Gut  Anzahl</ID>
+          <Name>Besonders Gut  Anzahl</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="b24285c6-856a-48a3-988b-facae1c1d217">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="80c27726-ac03-417c-b16d-144ec4c15263">
+              <TableID>dbo_FactEvaluierungen</TableID>
+              <ColumnID>BesondersGut</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
@@ -390,4 +644,17 @@
   <Source dwd:design-time-name="452c6799-d8e8-4958-9463-5859aa029c2a">
     <DataSourceViewID>DWH Ausbildungs Evaluierung</DataSourceViewID>
   </Source>
+  <Kpis>
+    <Kpi dwd:design-time-name="f24baf61-480f-431e-a101-40f62a94500c">
+      <ID>KPI</ID>
+      <Name>KPI_Alter im Durchschnitt</Name>
+      <AssociatedMeasureGroupID>Dim Personen</AssociatedMeasureGroupID>
+      <Value>[Measures].[Altersschnitt]</Value>
+      <Goal>[Measures].[Altersanzahl]</Goal>
+      <Status>[Measures].[Altersschnitt]/[Measures].[Altersanzahl]</Status>
+      <Trend>0</Trend>
+      <TrendGraphic>Smiley Face</TrendGraphic>
+      <StatusGraphic>Thermometer</StatusGraphic>
+    </Kpi>
+  </Kpis>
 </Cube>

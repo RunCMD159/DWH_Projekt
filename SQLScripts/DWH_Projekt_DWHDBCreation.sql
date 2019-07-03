@@ -2,9 +2,9 @@ CREATE TABLE FactEvaluierungen
 (
 	[EvaluierungKey] int identity primary key,
 	[EvaluierungBusinessKey] [int] NOT NULL,
-	[VeranstaltungsBusinessKey] [int] NOT NULL,
-	[StudienrichtungBusinessKey] [int] NOT NULL,
-	[PersonBusinessKey] [int] NOT NULL,
+	[VeranstaltungsKey] [int] NOT NULL,
+	[StudienrichtungKey] [int] NOT NULL,
+	[PersonKey] [int] NOT NULL,
 	[Datum] [date] NULL,
 	[AufbauUndGliederungDerLerhveranstaltung] [int] NULL,
 	[LehrveranstaltungsleitungKompetenz] [int] NULL,

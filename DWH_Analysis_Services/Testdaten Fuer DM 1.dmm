@@ -1,12 +1,12 @@
-﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1f728811-e132-43da-a08c-e94e4be8e834" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Dbo Testdaten Fuer DM</ID>
-  <Name>Dbo Testdaten Fuer DM</Name>
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b0cb0d25-c67e-417d-8ee2-2d1b44e8b9ce" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Testdaten Fuer DM 1</ID>
+  <Name>Testdaten Fuer DM 1</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
-      <Value>dbo_dbo.TestdatenFuerDM</Value>
+      <Value>dbo_TestdatenFuerDM</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -16,7 +16,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-11595" scrolltop="-7938" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="26802" y="20876" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-15339" scrolltop="-4630" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="34290" y="17145" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -27,13 +27,13 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dbo.TestdatenFuerDM" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3572" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="TestdatenFuerDM" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3572" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000f40d000088130000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dbo_dbo.TestdatenFuerDM" vartype="8" />
+                <property name="LogicalObject" value="dbo_TestdatenFuerDM" vartype="8" />
               </ddsxmlobj>
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
@@ -51,11 +51,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-11595</Value>
+      <Value>-15339</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-7938</Value>
+      <Value>-4630</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -72,198 +72,198 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="55a1f979-aad9-4bf6-9ca7-072593282c19">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="eb245852-9126-45ed-8010-1676b0409301">
     <DataSourceViewID>Ausbildungs Evaluierung</DataSourceViewID>
   </Source>
   <Columns>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="581dc200-c757-4967-8411-c288a0e62d33">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ff774341-15b7-4661-af58-2c9d673d0f86">
       <ID>Alter In Jahren</ID>
       <Name>Alter In Jahren</Name>
       <Type>Long</Type>
-      <Content>Discrete</Content>
+      <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="67b06772-ecf4-46af-93fb-40ff631c620a">
+        <KeyColumn dwd:design-time-name="5d2c256c-845a-466a-a5f7-8f48bc1d7d73">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e55d6edc-f53f-454c-b516-9e9aa18a8fe0">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a76000ca-71a4-4a0e-ade4-b211f83a8276">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>AlterInJahren</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0dc984ea-4c6b-41f7-b6e9-69a68a4809c3">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="24f2607e-86d5-4a4f-a394-2a52c5e07d3c">
       <ID>Ausweisnr</ID>
       <Name>Ausweisnr</Name>
       <IsKey>true</IsKey>
       <Type>Long</Type>
       <Content>Key</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="4d6a33ce-a381-427a-af2e-22f13b5a8e34">
+        <KeyColumn dwd:design-time-name="7d89d2c7-4f70-413f-94ad-6a53e6c30f97">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3d040da-32d5-4ba3-8d85-04128a6b2d2f">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2e45ecb6-b1b6-4b74-9d02-2d7842d62b22">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Ausweisnr</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a96cfb08-4ad4-4085-a6d2-21ce744845d4">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="76b3d04d-dc1d-4def-9d52-cbc74ff63fe6">
       <ID>Bundesland</ID>
       <Name>Bundesland</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="6fbafd96-b2b7-4d7e-993b-6bb08782cf28">
+        <KeyColumn dwd:design-time-name="7aa55c82-7ea0-4e99-95be-d2d1ba793bef">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2aa00d08-98bf-45e7-8b1c-21387782c923">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8eb4883-172f-4a7a-beec-3aaa0271573f">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Bundesland</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="49456b7b-4b5f-4214-b242-20c132ae7bc4">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8be2041f-0ac1-4d18-9f78-15c8d2525a06">
       <ID>Empfohlen</ID>
       <Name>Empfohlen</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="a37fd8a1-4bcd-4238-91f5-9bbdb6c5859b">
+        <KeyColumn dwd:design-time-name="2ffdf957-9b88-4c8d-be21-60beee18211e">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4daca192-1718-4c10-bf47-2a1e488bcaa6">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a76d96c-f9eb-42b0-8768-15a90d7131de">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Empfohlen</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4144c353-8116-4bf5-90bb-0a3d8814fc1e">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f388e9e8-7fbf-492d-856e-aecf502660e6">
       <ID>Geschlecht</ID>
       <Name>Geschlecht</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="6b5f2256-732f-4757-a1cb-41f8a9937b8b">
+        <KeyColumn dwd:design-time-name="33889d78-e099-4211-8f97-ca9b594c1547">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="91a216ba-ea90-46e7-97d4-dee71c1eb124">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="70e73e41-a113-434a-a302-6e8b1b980cde">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Geschlecht</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="20189bb6-da35-499b-86e8-c1f44a350e83">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="efe98998-f920-4fcc-b700-83c4fe9f8d84">
       <ID>Inhalt</ID>
       <Name>Inhalt</Name>
       <Type>Long</Type>
       <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="334d1335-08bb-4952-a4d5-4a04f3ad0bc2">
+        <KeyColumn dwd:design-time-name="2ce5d4ed-c75e-4bd9-adc2-c179dad9e653">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d141c525-9a9d-4562-8853-cd51af1289a7">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e988428-032a-4406-a7bb-b09d5b72b65b">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Inhalt</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6ba03022-cf1e-4de6-8acb-08fcf840b967">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9c721805-de9d-4fc8-a6d9-5bb91bccf62c">
       <ID>Kompetenz</ID>
       <Name>Kompetenz</Name>
       <Type>Long</Type>
-      <Content>Discrete</Content>
+      <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ee2d678c-9457-4c03-b339-e25796b8f275">
+        <KeyColumn dwd:design-time-name="4995fb09-8042-467c-8dec-710ff24381c5">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f00b8491-92df-44d9-9c2a-e872b6fe490e">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34fdd9d9-0e00-49e3-9520-e2cbbea869ba">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Kompetenz</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="dc296059-05fd-49b4-8954-d8b7774b529e">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="519a7e1f-e392-43f3-8345-397967b851b4">
       <ID>Lehrabschluss</ID>
       <Name>Lehrabschluss</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="317b9389-3979-47e8-ab0b-04f6e8dc3c35">
+        <KeyColumn dwd:design-time-name="07fa8413-5c66-44a4-ae6a-056bd0f4a28a">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="153330b3-a848-4fa9-883f-d7d19ece73d5">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="15b55fdc-cf63-4a7b-a914-f97b825ebf2a">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Lehrabschluss</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6ef8958b-1d21-4040-846a-93f41fcc169a">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b6778e5a-093c-4ec6-9ee1-0d66b9e94374">
       <ID>Matura</ID>
       <Name>Matura</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="b3d2567f-2534-4dfd-8330-f80dc1f8fb9c">
+        <KeyColumn dwd:design-time-name="931b626b-6ee1-4515-b252-a6f76c6c47a9">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f795e888-849c-4212-a9fb-e6c3358cc271">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9dbef297-2d39-460f-a6ae-7f41cad4ff80">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Matura</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="904aff0a-1334-46b9-bd66-be85b42c707f">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="44bbf0b6-13f3-4152-82fc-58219261d9b3">
       <ID>Schwierigkeitsgrad</ID>
       <Name>Schwierigkeitsgrad</Name>
       <Type>Long</Type>
-      <Content>Discrete</Content>
+      <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="1fb96667-a81d-435f-9b1b-56cc3650bfd1">
+        <KeyColumn dwd:design-time-name="a32429e1-721a-46fe-8043-f6b3882be69a">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="971a7ed1-cb5e-4788-8cac-8bcc3882d2be">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aecdaac3-90e9-44fe-a726-c8de229b6ca4">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Schwierigkeitsgrad</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9620280e-0d2c-4d1d-b0b3-e6c5686b8862">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="65b014d4-1ae2-4d5d-9ae2-8be6181ca3e8">
       <ID>Veranstaltung</ID>
       <Name>Veranstaltung</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="0351fb00-c6ba-4c3d-a43f-2a7b6f6ef25d">
+        <KeyColumn dwd:design-time-name="f68f82d1-40cf-4791-b9b5-1c6412cfaa08">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2a4284e1-2ce4-4d8c-939c-c83dcd7c0523">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4bf05306-236c-4e58-8421-722621fb563f">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>Veranstaltung</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d29ae3af-d874-45ee-86e5-0bbe90f82fe0">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="bfa418eb-eb1b-4845-a003-a676117c9a44">
       <ID>WG</ID>
       <Name>WG</Name>
       <Type>Text</Type>
       <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="0a056edd-ba75-4b77-af2d-7992a4a9982a">
+        <KeyColumn dwd:design-time-name="e3fca1e1-7e9d-497b-9a33-b866bce253de">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="73bc42ac-4436-409d-8b82-3dd702ef3d43">
-            <TableID>dbo_dbo.TestdatenFuerDM</TableID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="92380698-4be8-4dae-a441-c47533a56cb4">
+            <TableID>dbo_TestdatenFuerDM</TableID>
             <ColumnID>WG</ColumnID>
           </Source>
         </KeyColumn>
@@ -271,42 +271,45 @@
     </Column>
   </Columns>
   <MiningModels>
-    <MiningModel dwd:design-time-name="10f46a61-ddd5-4994-bcee-8fc82fd88e5c">
-      <ID>Dbo Testdaten Fuer DM</ID>
-      <Name>Dbo Testdaten Fuer DM</Name>
+    <MiningModel dwd:design-time-name="9f819197-27bb-4ac7-993c-58a2b18de9ea">
+      <ID>Testdaten Fuer DM 1</ID>
+      <Name>Testdaten Fuer DM 1</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Algorithm>Microsoft_Decision_Trees</Algorithm>
       <Columns>
-        <Column dwd:design-time-name="ad917e84-7513-47fd-8d7e-136c087fadba">
+        <Column dwd:design-time-name="5f5c357c-66cf-4175-904c-fda0c9c02d21">
           <ID>Alter In Jahren</ID>
           <Name>Alter In Jahren</Name>
           <SourceColumnID>Alter In Jahren</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
         </Column>
-        <Column dwd:design-time-name="0e95922c-f7a6-4980-b12f-6b85a2feca09">
+        <Column dwd:design-time-name="4a97c11b-ea22-4315-8eab-1f09f3bbd3fa">
           <ID>Ausweisnr</ID>
           <Name>Ausweisnr</Name>
           <SourceColumnID>Ausweisnr</SourceColumnID>
           <Usage>Key</Usage>
         </Column>
-        <Column dwd:design-time-name="c95b43dd-bfd4-4295-a60b-5889db793147">
+        <Column dwd:design-time-name="3d86a281-9d81-4566-bb1e-3ee9679b88eb">
           <ID>Bundesland</ID>
           <Name>Bundesland</Name>
           <SourceColumnID>Bundesland</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="661d89c9-b73b-4a9e-af8b-68d796dbbb23">
+        <Column dwd:design-time-name="104bf349-c446-434a-8e28-a3a902a3ae9c">
           <ID>Empfohlen</ID>
           <Name>Empfohlen</Name>
           <SourceColumnID>Empfohlen</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="30ee0366-8937-470f-88c9-9d7a232ecfe4">
+        <Column dwd:design-time-name="6028f4cf-7fcc-4e6f-9b0b-3974cd4edb04">
           <ID>Geschlecht</ID>
           <Name>Geschlecht</Name>
           <SourceColumnID>Geschlecht</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="1654dbe0-2b1c-4b00-b30e-cd80524f888b">
+        <Column dwd:design-time-name="ecaf30a3-f884-42ff-aa67-53f2c82032b4">
           <ID>Inhalt</ID>
           <Name>Inhalt</Name>
           <SourceColumnID>Inhalt</SourceColumnID>
@@ -314,178 +317,168 @@
             <ModelingFlag>REGRESSOR</ModelingFlag>
           </ModelingFlags>
         </Column>
-        <Column dwd:design-time-name="c2536209-17ca-49a6-a6fe-ec4cf23169ef">
+        <Column dwd:design-time-name="70cbf402-95de-45a5-b6f9-7201e6994e52">
           <ID>Kompetenz</ID>
           <Name>Kompetenz</Name>
           <SourceColumnID>Kompetenz</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
         </Column>
-        <Column dwd:design-time-name="acb5dd65-0315-4d89-bb47-395d0392ec36">
+        <Column dwd:design-time-name="6acd168e-aa24-4408-8abb-ac41cbd229e6">
           <ID>Lehrabschluss</ID>
           <Name>Lehrabschluss</Name>
           <SourceColumnID>Lehrabschluss</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="c2f6b76d-1b1e-40f5-8ecb-dd8425580e9a">
+        <Column dwd:design-time-name="3f7eef2b-c2bf-40d2-8c04-9e1c5705b784">
           <ID>Matura</ID>
           <Name>Matura</Name>
           <SourceColumnID>Matura</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="64c8a661-be63-4e63-b7cb-925753f28343">
+        <Column dwd:design-time-name="4614c48e-a511-4440-b3f3-d7e36b75605a">
           <ID>Schwierigkeitsgrad</ID>
           <Name>Schwierigkeitsgrad</Name>
           <SourceColumnID>Schwierigkeitsgrad</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
         </Column>
-        <Column dwd:design-time-name="c6e15dbf-7c58-4694-831d-afb1315fb431">
+        <Column dwd:design-time-name="2d77a226-c515-4ffa-8793-8ff619180241">
           <ID>Veranstaltung</ID>
           <Name>Veranstaltung</Name>
           <SourceColumnID>Veranstaltung</SourceColumnID>
-          <Usage>Predict</Usage>
         </Column>
-        <Column dwd:design-time-name="53dcaa51-6472-48c3-a5d9-dec8eda7db95">
+        <Column dwd:design-time-name="d6c92b57-d439-4c64-9c5b-0f4e19ff6662">
           <ID>WG</ID>
           <Name>WG</Name>
           <SourceColumnID>WG</SourceColumnID>
+          <Usage>PredictOnly</Usage>
         </Column>
       </Columns>
-      <AllowDrillThrough>true</AllowDrillThrough>
     </MiningModel>
-    <MiningModel dwd:design-time-name="1cf5ea8c-f9b6-41e1-a771-b1d053b977e9">
-      <ID>MM_Bayes</ID>
-      <Name>MM_Bayes</Name>
+    <MiningModel dwd:design-time-name="e2402439-ab31-4f66-b1a4-346a4c930675">
+      <ID>Model_Bayes</ID>
+      <Name>Model_Bayes</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Algorithm>Microsoft_Naive_Bayes</Algorithm>
       <Columns>
-        <Column dwd:design-time-name="e5d838f3-a210-4539-aba5-5dfeb72aa83f">
-          <ID>Alter In Jahren</ID>
-          <Name>Alter In Jahren</Name>
-          <SourceColumnID>Alter In Jahren</SourceColumnID>
-        </Column>
-        <Column dwd:design-time-name="dc21a487-d3f3-4de2-932d-203679181bf3">
+        <Column dwd:design-time-name="b45c5d03-be20-4794-acff-16a962be0a39">
           <ID>Ausweisnr</ID>
           <Name>Ausweisnr</Name>
           <SourceColumnID>Ausweisnr</SourceColumnID>
           <Usage>Key</Usage>
         </Column>
-        <Column dwd:design-time-name="6a220024-6490-4daa-9fc3-941b5488e0d1">
+        <Column dwd:design-time-name="5857a8f5-e04a-4730-b87f-68bcdc7bd0ec">
           <ID>Bundesland</ID>
           <Name>Bundesland</Name>
           <SourceColumnID>Bundesland</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="abddf685-adc0-4fe1-bf75-84e4aef7ae60">
+        <Column dwd:design-time-name="df312da5-5a58-49aa-b84e-528970b91845">
           <ID>Empfohlen</ID>
           <Name>Empfohlen</Name>
           <SourceColumnID>Empfohlen</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="5a76276f-abe3-4a4d-9274-1cae5e5aab1c">
+        <Column dwd:design-time-name="a154b8f5-f62a-412b-ba23-d472ba6a6a4d">
           <ID>Geschlecht</ID>
           <Name>Geschlecht</Name>
           <SourceColumnID>Geschlecht</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="5c41dc5e-54bf-45d5-9822-2d896df4d303">
-          <ID>Kompetenz</ID>
-          <Name>Kompetenz</Name>
-          <SourceColumnID>Kompetenz</SourceColumnID>
-        </Column>
-        <Column dwd:design-time-name="0df8ada3-1bb1-4972-98ae-bb39d060e595">
+        <Column dwd:design-time-name="b6703339-7bbc-49c1-a1b2-9a7c9c8a784a">
           <ID>Lehrabschluss</ID>
           <Name>Lehrabschluss</Name>
           <SourceColumnID>Lehrabschluss</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="6baf41c9-0e93-437a-a805-d6f0f7ca6fad">
+        <Column dwd:design-time-name="d16818c8-4361-4ded-b4f2-9304a7933c6e">
           <ID>Matura</ID>
           <Name>Matura</Name>
           <SourceColumnID>Matura</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="e5adb46b-8b55-4095-87b7-0569fd1b9696">
-          <ID>Schwierigkeitsgrad</ID>
-          <Name>Schwierigkeitsgrad</Name>
-          <SourceColumnID>Schwierigkeitsgrad</SourceColumnID>
-        </Column>
-        <Column dwd:design-time-name="8d17e68f-297f-4bf1-9d38-c2a0f4034e5b">
+        <Column dwd:design-time-name="a0476953-8833-4786-a693-6c4c5dbf6604">
           <ID>Veranstaltung</ID>
           <Name>Veranstaltung</Name>
           <SourceColumnID>Veranstaltung</SourceColumnID>
-          <Usage>Predict</Usage>
         </Column>
-        <Column dwd:design-time-name="4fe14e2e-3091-4e5e-b539-b2f109c90296">
+        <Column dwd:design-time-name="fcf01cdb-5e4b-43a4-be32-5d9bf07868bb">
           <ID>WG</ID>
           <Name>WG</Name>
           <SourceColumnID>WG</SourceColumnID>
+          <Usage>PredictOnly</Usage>
         </Column>
       </Columns>
     </MiningModel>
-    <MiningModel dwd:design-time-name="8f387650-4e32-4527-8aae-828a451f5bd9">
-      <ID>MM_Cluster</ID>
-      <Name>MM_Cluster</Name>
+    <MiningModel dwd:design-time-name="21fea863-0130-4d3e-8222-528c2209d563">
+      <ID>Model_Cluster</ID>
+      <Name>Model_Cluster</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Algorithm>Microsoft_Clustering</Algorithm>
       <Columns>
-        <Column dwd:design-time-name="03e70282-bb9e-4cdd-9a21-02f7ae9ede8d">
+        <Column dwd:design-time-name="bdf1bd06-f068-478e-92a8-d6e3f82d0d0d">
           <ID>Alter In Jahren</ID>
           <Name>Alter In Jahren</Name>
           <SourceColumnID>Alter In Jahren</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="502b8140-37b0-4798-a26a-2fd9922568bf">
+        <Column dwd:design-time-name="ab4969ee-f24f-4c16-a17f-229d52cfb012">
           <ID>Ausweisnr</ID>
           <Name>Ausweisnr</Name>
           <SourceColumnID>Ausweisnr</SourceColumnID>
           <Usage>Key</Usage>
         </Column>
-        <Column dwd:design-time-name="ea7402de-38e5-42f4-bfba-bbae23b0bf18">
+        <Column dwd:design-time-name="a895edc1-2e03-40a8-a26f-67145bc17022">
           <ID>Bundesland</ID>
           <Name>Bundesland</Name>
           <SourceColumnID>Bundesland</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="aff93459-69b8-4df3-964b-5beb6130de85">
+        <Column dwd:design-time-name="f3ef2871-6415-4a9b-b680-4bd087d740d7">
           <ID>Empfohlen</ID>
           <Name>Empfohlen</Name>
           <SourceColumnID>Empfohlen</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="1dd8523e-f7b1-4080-a294-0d95a0e47448">
+        <Column dwd:design-time-name="1271b7b2-5b34-43b4-9527-60fba40b6e0b">
           <ID>Geschlecht</ID>
           <Name>Geschlecht</Name>
           <SourceColumnID>Geschlecht</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="d55d80d8-3182-4c29-bca6-900994556374">
+        <Column dwd:design-time-name="61cc0533-2c9e-4ff9-909b-8920779554c0">
           <ID>Inhalt</ID>
           <Name>Inhalt</Name>
           <SourceColumnID>Inhalt</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="babb5aec-af94-43f4-ac50-db77eb84821d">
+        <Column dwd:design-time-name="9a6413ea-ce85-45c5-b9f7-9442256e44cb">
           <ID>Kompetenz</ID>
           <Name>Kompetenz</Name>
           <SourceColumnID>Kompetenz</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="3e9b7cbf-3bc8-4969-956a-bed6ab1239b7">
+        <Column dwd:design-time-name="dd2a2c08-d9d4-4ea5-9666-9a00592816db">
           <ID>Lehrabschluss</ID>
           <Name>Lehrabschluss</Name>
           <SourceColumnID>Lehrabschluss</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="c3b3bc19-f000-4181-a0f2-8ca93bf11c59">
+        <Column dwd:design-time-name="55069913-d159-4be3-a87f-525051e4f919">
           <ID>Matura</ID>
           <Name>Matura</Name>
           <SourceColumnID>Matura</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="2fe4e105-22a8-4f44-8561-2fce8f659a7c">
+        <Column dwd:design-time-name="f9727d1d-bdfa-47b4-a94a-7971bf7cc41d">
           <ID>Schwierigkeitsgrad</ID>
           <Name>Schwierigkeitsgrad</Name>
           <SourceColumnID>Schwierigkeitsgrad</SourceColumnID>
         </Column>
-        <Column dwd:design-time-name="fbab3d62-62fc-40e5-8d6c-e011aafe95fb">
+        <Column dwd:design-time-name="b9c76314-bf1c-49d8-a1af-52bd4bf2cc12">
           <ID>Veranstaltung</ID>
           <Name>Veranstaltung</Name>
           <SourceColumnID>Veranstaltung</SourceColumnID>
-          <Usage>Predict</Usage>
         </Column>
-        <Column dwd:design-time-name="b5494967-01cf-477e-826f-bb764c17a9be">
+        <Column dwd:design-time-name="56f6b750-95e9-4b94-a95d-625d8e163b57">
           <ID>WG</ID>
           <Name>WG</Name>
           <SourceColumnID>WG</SourceColumnID>
+          <Usage>PredictOnly</Usage>
         </Column>
       </Columns>
     </MiningModel>

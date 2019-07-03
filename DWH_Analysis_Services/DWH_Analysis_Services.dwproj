@@ -20,8 +20,8 @@
   </DataSourceViews>
   <MiningModels>
     <ProjectItem>
-      <Name>Dbo Testdaten Fuer DM.dmm</Name>
-      <FullPath>Dbo Testdaten Fuer DM.dmm</FullPath>
+      <Name>Testdaten Fuer DM 1.dmm</Name>
+      <FullPath>Testdaten Fuer DM 1.dmm</FullPath>
     </ProjectItem>
   </MiningModels>
   <Configurations>
